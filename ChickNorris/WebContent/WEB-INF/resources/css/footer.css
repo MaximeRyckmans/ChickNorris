@@ -1,0 +1,43 @@
+@CHARSET "UTF-8";
+
+.scroll-top {
+   position: fixed;
+   bottom: 0;
+   right: 3%;
+   z-index: 100;
+   background: #e9500e;
+   font-size: 24px;
+   border-top-left-radius: 3px;
+   border-top-right-radius: 3px;
+}
+.scroll-top a:link,.scroll-top a:visited {
+  color: #dbd1c2;
+}
+
+#footer-menu {
+	height: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 0;
+	padding-right: 0;
+	margin: 0;
+	list-style: none;
+	text-align: center;
+	font-family: 'Indie Flower';
+	background-color: #363636;
+	-webkit-box-shadow: inset 0px 12px 15px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: inset 0px 12px 15px 0px rgba(0,0,0,0.75);
+	box-shadow: inset 0px 12px 15px 0px rgba(0,0,0,0.75);
+}
+
+#footer-menu ul {
+	list-style: none;
+	padding: 0;
+}
+
+#footer-menu a {
+	color: white;
+}
+	#footer-menu a:hover {
+		color: #e9500e;
+	}
