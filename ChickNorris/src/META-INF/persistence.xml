@@ -5,9 +5,9 @@
 	<persistence-unit name="ChickNorris">
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
-			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://sql3.freemysqlhosting.net/sql364293" />
-			<property name="javax.persistence.jdbc.user" value="sql364293" />
-			<property name="javax.persistence.jdbc.password" value="dP8!wX8*" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://db4free.net/chicken" />
+			<property name="javax.persistence.jdbc.user" value="chicknorris" />
+			<property name="javax.persistence.jdbc.password" value="chickadmin" />
 			<property name="hibernate.show_sql" value="true" />
 			<property name="hibernate.format_sql" value="true" />
 			<property name="hibernate.use_sql_comments" value="true" />
