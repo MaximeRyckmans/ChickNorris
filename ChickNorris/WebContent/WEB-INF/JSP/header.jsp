@@ -29,7 +29,7 @@
                 <li class="dropdown">
                   <a href="#catering" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">CN Catering <span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
-                    <li><a href="privateparty.jsp">CN Prive Party</a></li>
+                    <li><a href="PrivateParty.htm">CN Prive Party</a></li>
                     <li><a href="#bussiness">CN Bussiness Party</a></li>
                   </ul>
                 </li>
