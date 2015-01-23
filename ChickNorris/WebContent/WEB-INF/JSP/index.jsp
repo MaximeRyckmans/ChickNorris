@@ -18,7 +18,7 @@
 </head>
 <body>
 	
-	<div id="header"></div>
+	<div id="header"><%@include file='header.jsp'%></div>
 	<div id="content">
 		<div id="myCarousel" class="carousel slide" data-ride="carousel">
       		<!-- Indicators -->
@@ -86,7 +86,7 @@
     		</div>
     	</div>
 	</div>
-	<div id="footer"></div>
+	<div id="footer"><%@include file='footer.jsp'%></div>
 	
 	<!-- JavaScript
     ================================================== -->

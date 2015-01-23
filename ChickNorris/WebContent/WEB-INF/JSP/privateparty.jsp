@@ -20,7 +20,7 @@
 	<!-- ===============================================================
 			TODO: Issues responsive design at 360 and below
 		 =============================================================== -->
-	<div id="header"></div>
+	<div id="header"><%@include file='header.jsp'%></div>
 	<div id="content">
 		<div class="title-page">
 			<h2>CN Prive Feestjes</h2>
@@ -119,7 +119,7 @@
 			</div>
 		</div>
 	</div>
-	<div id="footer"></div>
+	<div id="footer"><%@include file='footer.jsp'%></div>
 	
 	<!-- JavaScript
     ================================================== -->

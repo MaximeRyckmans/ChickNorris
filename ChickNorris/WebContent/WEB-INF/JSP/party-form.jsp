@@ -20,7 +20,7 @@
 	<![endif]-->
 </head>
 <body>
-	<div id="header"></div>
+	<div id="header"><%@include file='header.jsp'%></div>
 	<div id="content">
 		<div id="calendar"></div>
 		<div id="form">
@@ -121,7 +121,7 @@
 			</form>
 		</div>
 	</div>
-	<div id="footer"></div>
+	<div id="footer"><%@include file='footer.jsp'%></div>
 	<!-- JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
