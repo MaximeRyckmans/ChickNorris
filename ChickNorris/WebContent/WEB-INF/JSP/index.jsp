@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="resources/css/index.css"/>
 	<link rel="stylesheet" type="text/css" href="resources/css/media-queries.css"/>
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Indie+Flower"/>
+	<link rel="shortcut icon" href="resources/images/logo.ico">
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
