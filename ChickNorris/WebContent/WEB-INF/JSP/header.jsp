@@ -30,7 +30,7 @@
                   <a href="#catering" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">CN Catering <span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
                     <li><a href="privateparty.html">CN Prive Party</a></li>
-                    <li><a href="#bussiness">CN Bussiness Party</a></li>
+                    <li><a href="#bussiness">CN Business Party</a></li>
                   </ul>
                 </li>
                 <li><a href="#order">CN Bestel Online</a></li>
