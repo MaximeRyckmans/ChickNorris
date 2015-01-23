@@ -3,15 +3,5 @@
   <display-name>ChickNorris</display-name>
   <welcome-file-list>
     <welcome-file>Home.htm</welcome-file>
-  </welcome-file-list>
-  <servlet>
-    <description></description>
-    <display-name>party-form</display-name>
-    <servlet-name>party-form</servlet-name>
-    <jsp-file>/WEB-INF/JSP/party-form.jsp</jsp-file>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>party-form</servlet-name>
-    <url-pattern>/party-form.htm</url-pattern>
-  </servlet-mapping>
+  </welcome-file-list> 
 </web-app>

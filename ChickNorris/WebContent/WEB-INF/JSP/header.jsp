@@ -20,11 +20,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="index.jsp"><div id="logo"></div></a>
+              <a class="navbar-brand" href="Home.htm"><div id="logo"></div></a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li id="home"><a href="index.jsp">Home</a></li>
+                <li id="home"><a href="Home.htm">Home</a></li>
                 <li><a href="#tour">CN on Tour</a></li>
                 <li class="dropdown">
                   <a href="#catering" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">CN Catering <span class="caret"></span></a>
