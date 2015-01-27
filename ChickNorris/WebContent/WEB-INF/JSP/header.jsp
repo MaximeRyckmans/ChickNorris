@@ -1,14 +1,18 @@
 <!DOCTYPE HTML>
 
 <html>
-	<div id="top-nav">
-		<ul>
-			<li><a href="#">About CN</a></li>
-			<li><a href="#">CN Jobs</a></li>
-			<li><a href="#">Localize CN</a></li>
-		</ul>
-	</div>
-	<div id="nav-wrapper" class="navbar-wrapper">
+	<header class="container-fluid utility-header">
+    	<div class="content">
+        	<nav>
+            	<ul>
+                	<li><a href="#">About CN</a></li>
+                	<li><a href="#">CN Jobs</a></li>
+                	<li><a href="#">Localize CN</a></li>
+            	</ul>
+        	</nav>
+    	</div>
+	</header>
+	<header id="nav-wrapper" class="navbar-wrapper">
       <div class="container">
 
         <nav id="nav" class="navbar navbar-inverse navbar-static-top" role="navigation">
@@ -53,5 +57,5 @@
         </nav>
 
       </div>
-    </div>
+    </header>
 </html>
