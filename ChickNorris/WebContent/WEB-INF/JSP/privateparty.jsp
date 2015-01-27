@@ -44,7 +44,7 @@
 							<li>Wagen blijft 2 hr ter plaatse.</li>
 							<li>Optie: Springkasteel (***)</li>
 						</ul>
-						<a role="button" class="btn btn-default" href="party-form.jsp">Bestel nu!</a>
+						<a role="button" class="btn btn-default" href="Party-Form.htm">Bestel nu!</a>
 						<span>5 EUR (*)</span>						
 					</div>
 				</div>
@@ -61,7 +61,7 @@
 							<li>Wagen blijft 2 hr ter plaatse.</li>
 							<li>Optie: Springkasteel (***)</li>
 						</ul>
-						<a role="button" class="btn btn-default" href="party-form.jsp">Bestel nu!</a>
+						<a role="button" class="btn btn-default" href="Party-Form.htm">Bestel nu!</a>
 						<span>7,50 EUR (*)</span>						
 					</div>
 				</div>
@@ -82,7 +82,7 @@
 							<li>Wagen blijft 3hr ter plaatse.</li>
 							<li>Optie: Springkasteel (***)</li>
 						</ul>
-						<a role="button" class="btn btn-default" href="party-form.jsp">Bestel nu!</a>
+						<a role="button" class="btn btn-default" href="Party-Form.htm">Bestel nu!</a>
 						<span>8.50 EUR (*)</span>						
 					</div>
 				</div>
@@ -100,7 +100,7 @@
 							<li>Wagen blijft 4 hr ter plaatse.</li>
 							<li id="bounce-extra">Met steeds een GRATIS Springkasteel</li>
 						</ul>
-						<a role="button" class="btn btn-default" href="party-form.jsp">Bestel nu!</a>
+						<a role="button" class="btn btn-default" href="Party-Form.htm">Bestel nu!</a>
 						<span>12.50 EUR (*)</span>						
 					</div>
 				</div>
