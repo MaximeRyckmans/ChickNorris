@@ -1,14 +1,18 @@
 <!DOCTYPE HTML>
 
 <html>
-	<div id="top-nav">
-		<ul>
-			<li><a href="#">About CN</a></li>
-			<li><a href="#">CN Jobs</a></li>
-			<li><a href="#">Localize CN</a></li>
-		</ul>
-	</div>
-	<div id="nav-wrapper" class="navbar-wrapper">
+	<header class="container-fluid utility-header">
+    	<div class="content">
+        	<nav>
+            	<ul>
+                	<li><a href="#">About CN</a></li>
+                	<li><a href="#">CN Jobs</a></li>
+                	<li><a href="#">Localize CN</a></li>
+            	</ul>
+        	</nav>
+    	</div>
+	</header>
+	<header id="nav-wrapper" class="navbar-wrapper">
       <div class="container">
 
         <nav id="nav" class="navbar navbar-inverse navbar-static-top" role="navigation">
@@ -20,11 +24,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="index.jsp"><div id="logo"></div></a>
+              <a class="navbar-brand" href="Home.htm"><div id="logo"></div></a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li id="home"><a href="index.jsp">Home</a></li>
+                <li id="home"><a href="Home.htm">Home</a></li>
                 <li><a href="#tour">CN on Tour</a></li>
                 <li class="dropdown">
                   <a href="#catering" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">CN Catering <span class="caret"></span></a>
@@ -53,5 +57,5 @@
         </nav>
 
       </div>
-    </div>
+    </header>
 </html>

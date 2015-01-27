@@ -53,18 +53,19 @@ body {
 	color: #db6836;
 }
 
-#top-nav {
-	width: 800px;
-	margin-top: -30px;
-	margin-left: 100px;
-	float: left;
+.utility-header {
+	width: 50%;
+	position: absolute;
+	top: 0;
+	right: 20%;
+	
 }
 
-#top-nav ul {
-	list-style: none;
-}
-
-#top-nav ul li {
+.utility-header ul li {
 	float: left;
 	margin-left: 20%;
+}
+
+.utility-header ul{
+	list-style: none;
 }
