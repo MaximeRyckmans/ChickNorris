@@ -1,0 +1,25 @@
+@CHARSET "UTF-8";
+
+.title-page {
+	width: 100%;
+	height: 50px;
+	margin-top: -20px;
+	background: #363636;
+	text-align: center;
+	-webkit-box-shadow: inset 0px 5px 15px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: inset 0px 5px 15px 0px rgba(0,0,0,0.75);
+	box-shadow: inset 0px 5px 15px 0px rgba(0,0,0,0.75);
+}
+
+.title-page h2 {
+	color: #e9500e;
+	font-family: 'Indie Flower';
+	font-weight: bold;
+	padding: 5px;
+	text-shadow: black 2px 2px 0px;
+}
+
+.text {
+	text-align: center;
+	font-size: 1.2em;
+}
