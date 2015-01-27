@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/PrivateParty.htm")
 public class PrivatePartyServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static final String VIEW = "WEB-INF/JSP/party-form.jsp";
+	private static final String VIEW = "WEB-INF/JSP/privateparty.jsp";
 
 	/**
 	 * @see HttpServlet#HttpServlet()
