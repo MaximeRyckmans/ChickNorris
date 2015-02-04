@@ -5,7 +5,7 @@
     	<div class="content">
         	<nav>
             	<ul>
-                	<li><a href="#">About CN</a></li>
+                	<li><a href="About.htm">About CN</a></li>
                 	<li><a href="#">CN Jobs</a></li>
                 	<li><a href="#">Localize CN</a></li>
             	</ul>
