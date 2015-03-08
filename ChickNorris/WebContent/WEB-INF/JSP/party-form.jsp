@@ -1,5 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="java.util.*"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -22,7 +21,17 @@
 <body>
 	<div id="header"><%@include file='header.jsp'%></div>
 	<div id="content">
-		<div id="calendar"></div>
+		<div id="calendar">
+			<% 
+				Calendar now = Calendar.getInstance();
+			 %>
+			<div id="calendarTop">
+				<button><span class="glyphicon glyphicon-chevron-left"></span></button>
+				<div id="calendarTitle">
+					<span id="calendarMonth"><% now.get(Calendar.MONTH); %></span>
+				</div>
+			</div>
+		</div>
 		<div id="form">
 			<form role="form" action="Party-Form.htm" method="post" >
 				<div class="form-group">
@@ -126,12 +135,9 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
 	<script type="text/javascript" src="resources/scripts/jquery.js"></script>	
-	<script type="text/javascript" src="resources/scripts/jquery-ui/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="resources/scripts/bootstrap/bootstrap.min.js"></script>
 	<script type="text/javascript" src="resources/scripts/template.js"></script>
 	<script type="text/javascript" src="resources/scripts/bootstrap/docs.min.js"></script>
-	<script type="text/javascript" src="resources/scripts/party-form.js"></script>
-	<script type="text/javascript" src="resources/scripts/jquery-ui/timepicker.js"></script>
 	<script type="text/javascript" src="resources/scripts/bootstrap/ie10-viewport-bug-workaround.js"></script>
 </body>
 </html>

@@ -4,50 +4,35 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Chick Norris - About Us</title>
+<title>Chick Norris - Localize</title>
 <link rel="stylesheet" type="text/css" href="resources/css/bootstrap/bootstrap.css"/>
 <link rel="stylesheet" type="text/css" href="resources/css/header.css"/>
 <link rel="stylesheet" type="text/css" href="resources/css/footer.css"/>
-<link rel="stylesheet" type="text/css" href="resources/css/general.css"/>
-<link rel="stylesheet" type="text/css" href="resources/css/about.css"/>
 <link rel="stylesheet" type="text/css" href="resources/css/media-queries.css"/>
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Indie+Flower"/>
+<link rel="shortcut icon" href="resources/images/logo.ico">
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<!--[if lt IE 9]>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
 </head>
 <body>
 	<div id="header"><%@include file='header.jsp'%></div>
 	<div id="content">
-		<div class="title-page">
-			<h2>Welkom bij Chick Norris “Kip Aan ’t Spit”</h2>
-		</div>
-		<div class="col-xs-3"></div>
-		<div class="text-center col-xs-6">
-			<p id="first-paragraph"> 
-				Chick Norris “Kip Aan ’t Spit”, actief sinds 2014, bestaat uit een jong en dynamisch team, met foodtrucks verspreid over het ganse land.
-				Hierdoor is onze Chick Norris Foodtruck steeds bij u in de buurt.
-			</p>
-
-			<p>
-				Naast onze vaste standplaatsen verzorgen wij tevens de catering van uw evenement, prive- en bedrijfsfeest aan zeer democratische prijzen.
-			</p>
-
-			<p>
-				Heeft U na het doornemen van onze website nog vragen, aarzel dan niet ons te contacteren.
-			</p>
-			<p>
-				Wenst u kans te maken op een GRATIS tuinfeest, klik dan <a href="#">HIER</a>.
-			</p>
-			<p>
-				Tot binnenkort!
-			</p>
-		</div>
+		<div id="map-canvas" style="height: 500px;"></div>
 	</div>
 	<div id="footer"><%@include file='footer.jsp'%></div>
+	
 	<!-- JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
 	<script type="text/javascript" src="resources/scripts/jquery.js"></script>
 	<script type="text/javascript" src="resources/scripts/bootstrap/bootstrap.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 	<script type="text/javascript" src="resources/scripts/template.js"></script>
+	<script type="text/javascript" src="resources/scripts/Localize.js"></script>
 	<script type="text/javascript" src="resources/scripts/bootstrap/docs.min.js"></script>
 	<script type="text/javascript" src="resources/scripts/bootstrap/ie10-viewport-bug-workaround.js"></script>
 </body>
