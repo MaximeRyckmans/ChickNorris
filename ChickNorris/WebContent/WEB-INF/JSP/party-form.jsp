@@ -1,3 +1,4 @@
+<%@page import="java.util.Date"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -19,18 +20,10 @@
 	<![endif]-->
 </head>
 <body>
-	<div id="header"><%@include file='header.jsp'%></div>
+	<div id="header"><%@include file="header.jsp"%></div>
 	<div id="content">
 		<div id="calendar">
-			<% 
-				Calendar now = Calendar.getInstance();
-			 %>
-			<div id="calendarTop">
-				<button><span class="glyphicon glyphicon-chevron-left"></span></button>
-				<div id="calendarTitle">
-					<span id="calendarMonth"><% now.get(Calendar.MONTH); %></span>
-				</div>
-			</div>
+			<%@include file="calendar.jsp" %>
 		</div>
 		<div id="form">
 			<form role="form">

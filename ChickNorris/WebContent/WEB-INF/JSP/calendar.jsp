@@ -19,7 +19,7 @@
 				<a id="Previous" href="#"><span class="glyphicon glyphicon-chevron-left"></span></a>
 				<div id="titleCalendar">
 					<span id="currentMonth"></span>
-					<span class="glyphicon glyphicon-minus"></span>
+					<span id="minus" class="glyphicon glyphicon-minus"></span>
 					<span id="currentYear"></span>
 				</div>
 				<a id="Next" href="#"><span class="glyphicon glyphicon-chevron-right"></span></a>
