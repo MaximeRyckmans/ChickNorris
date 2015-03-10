@@ -27,4 +27,8 @@ public class CustomerService {
 	public List<Customer> getAllCustomers() {
 		return customerDAO.getAllCustomers();
 	}
+
+	public List<Customer> getCustomersByName(String surName) {
+		return customerDAO.getCustomersByName(surName);
+	}
 }

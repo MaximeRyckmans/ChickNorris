@@ -5,9 +5,19 @@
 http://java.sun.com/xml/ns/persistence/orm_2_0.xsd"
 	version="2.0">
 
-	<!-- Queries voor Attendance -->
+	<!-- Queries voor Customers -->
 	<named-query name="selectAllCustomers">
 		<query>select c from Customer c</query>
+	</named-query>
+	
+	<named-query name="selectCustomersByName">
+	    <query>select c from Customer c where c.surName=:surName</query>
+	</named-query>
+	
+	<!-- Queries voor Calendars -->
+	
+	<named-query name="selectAllCalendars">
+		<query>select c from Calendar c</query>
 	</named-query>
 	
 	</entity-mappings>

@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import be.chicknorris.helper.EmailSender;
+
 /**
  * Servlet implementation class AdminServlet
  */
@@ -39,7 +41,8 @@ public class AdminServlet extends HttpServlet {
 	 */
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		EmailSender emailSender = new EmailSender();
+		emailSender.sendEmail(sender, addresses, subject, templateName, mailBody);
 	}
 
 }

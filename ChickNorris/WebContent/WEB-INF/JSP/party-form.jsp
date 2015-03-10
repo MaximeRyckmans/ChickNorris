@@ -26,80 +26,80 @@
 			<%@include file="calendar.jsp" %>
 		</div>
 		<div id="form">
-			<form role="form">
+			<form role="form" action="Party-Form.htm" method="post" >
 				<div class="form-group">
     				<label for="form_name">Naam (*) :</label>
-    				<input type="text" class="form-control" id="form_name" placeholder="Vul je naam in.">
+    				<input type="text" class="form-control" name="form_name" id="form_name" placeholder="Vul je naam in.">
   				</div>
   				<div class="form-group">
     				<label for="form_firstname">Voornaam (*):</label>
-    				<input type="text" class="form-control" id="form_firstname" placeholder="Vul je voornaam in.">
+    				<input type="text" class="form-control" name="form_firstname"  id="form_firstname" placeholder="Vul je voornaam in.">
   				</div>
   				<div class="form-group">
     				<label for="form_firmname">Firmanaam:</label>
-    				<input type="text" class="form-control" id="form_firmname" placeholder="Vul je firmanaam in.">
+    				<input type="text" class="form-control" name="form_firmname" id="form_firmname" placeholder="Vul je firmanaam in.">
   				</div>
   				<div class="form-group">
     				<label for="form_address">Adres (*):</label>
-    				<input type="text" class="form-control" id="form_address" placeholder="Vul je adres in.">
+    				<input type="text" class="form-control" name="form_address" id="form_address" placeholder="Vul je adres in.">
   				</div>
   				<div class="form-group">
     				<label for="form_zip">Postcode (*):</label>
-    				<input type="text" class="form-control" id="form_zip" placeholder="Vul je postcode in.">
+    				<input type="text" class="form-control" name="form_zip" id="form_zip" placeholder="Vul je postcode in.">
   				</div>
   				<div class="form-group">
     				<label for="form_city">Woonplaats (*):</label>
-    				<input type="text" class="form-control" id="form_city" placeholder="Vul je adres in.">
+    				<input type="text" class="form-control" name="form_city" id="form_city" placeholder="Vul je adres in.">
   				</div>
   				<div class="form-group">
     				<label for="form_taxnbr">BTW-nr:</label>
-    				<input type="text" class="form-control" id="form_taxnbr" placeholder="Vul je BTW-nr in.">
+    				<input type="text" class="form-control" name="form_taxnbr" id="form_taxnbr" placeholder="Vul je BTW-nr in.">
   				</div>
   				<div class="form-group">
     				<label for="form_phone">Tel(*):</label>
-    				<input type="text" class="form-control" id="form_phone" placeholder="Vul je telefoonnummer in.">
+    				<input type="text" class="form-control" name="form_phone" id="form_phone" placeholder="Vul je telefoonnummer in.">
   				</div>
   				<div class="form-group">
     				<label for="form_email">Email(*):</label>
-    				<input type="text" class="form-control" id="form_email" placeholder="Vul je emailadres in.">
+    				<input type="text" class="form-control" name="form_email" id="form_email" placeholder="Vul je emailadres in.">
   				</div>
   				<div class="form-group">
     				<label for="form_occasion">Gelegenheid (*):</label>
-    				<textarea class="form-control" rows="3" id="form_occasion"></textarea>
+    				<textarea class="form-control" rows="3" name="form_occasion" id="form_occasion"></textarea>
   				</div>
   				<div class="form-group">
     				<label for="form_date">Datum event (*):</label>
     				<%java.text.DateFormat df = new java.text.SimpleDateFormat("dd/MM/yyyy"); %>
-    				<input type="text" class="form-control" id="form_date" placeholder="<%= df.format(new Date()) %>">
+    				<input type="text" class="form-control" name="form_date" id="form_date" placeholder="<%= df.format(new Date()) %>">
   				</div>
   				<div class="form-group">
     				<label for="form_time">Aanvang event (*):</label>
     				<%java.text.DateFormat df2 = new java.text.SimpleDateFormat("HH:mm"); %>
-    				<input type="text" class="form-control" id="form_time" placeholder="<%= df2.format(new Date()) %>">
+    				<input type="text" class="form-control" name="form_time" id="form_time" placeholder="<%= df2.format(new Date()) %>">
   				</div>
   				<label for="radio-btns">Formule:</label>
   				<div id="radio-btns">
   					<div class="radio-inline">
   						<label>
-    						<input type="radio" name="optionsRadios" id="formula1" value="option1" checked>
+    						<input type="radio" name="optionsRadios" id="formula1" value="1" checked>
     						VIP
   						</label>
 					</div>
 					<div class="radio-inline">
   						<label>
-    						<input type="radio" name="optionsRadios" id="formula2" value="option2">
+    						<input type="radio" name="optionsRadios" id="formula2" value="2">
     						Deluxe
   						</label>
 					</div>
 					<div class="radio-inline">
   						<label>
-    						<input type="radio" name="optionsRadios" id="formula3" value="option3">
+    						<input type="radio" name="optionsRadios" id="formula3" value="3">
     						Regular
   						</label>
 					</div>
 					<div class="radio-inline">
   						<label>
-    						<input type="radio" name="optionsRadios" id="formula4" value="option4">
+    						<input type="radio" name="optionsRadios" id="formula4" value="4">
     						Basic
   						</label>
 					</div>
