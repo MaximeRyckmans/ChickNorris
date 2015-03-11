@@ -1,7 +1,5 @@
-package be.chicknorris.helper;
+package be.chickNorris.helper;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.StringWriter;
@@ -36,7 +34,15 @@ public class EmailSender {
 		// here we need to load our settings for things like smtp host,...
 		Properties props = new Properties();
 		try {
-			props.load(new FileInputStream(new File("settings.properties")));
+
+			// String curDir = System.getProperty("user.dir");
+			// System.out.println(curDir);
+			// File file = new File("settings.properties");
+			// System.out.println(file.getAbsolutePath() + "-----------" + file.exists());
+			// props.load(new FileInputStream(file));
+			//
+			props.load(Thread.currentThread().getContextClassLoader().getResourceAsStream("settings.properties"));
+
 		} catch (FileNotFoundException e1) {
 			e1.printStackTrace();
 		} catch (IOException e1) {
@@ -48,7 +54,7 @@ public class EmailSender {
 
 			@Override
 			protected PasswordAuthentication getPasswordAuthentication() {
-				return new PasswordAuthentication("abc@gmail.com", "xxxxxxxx");
+				return new PasswordAuthentication("maximeryckmans@gmail.com", "xxxxxxxx");
 			}
 		});
 
@@ -64,6 +70,8 @@ public class EmailSender {
 
 			// freemarker stuff.
 			Configuration cfg = new Configuration();
+			cfg.setClassForTemplateLoading(this.getClass(), "/");
+			// cfg.setDirectoryForTemplateLoading(new File(""));
 			// templateName = name of the .ftl template that needs to be injected
 			Template template = cfg.getTemplate(templateName);
 			/*

@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import be.chicknorris.helper.EmailSender;
+import be.chickNorris.helper.EmailSender;
 
 /**
  * Servlet implementation class AdminServlet
