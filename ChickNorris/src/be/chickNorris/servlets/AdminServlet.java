@@ -42,7 +42,7 @@ public class AdminServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		EmailSender emailSender = new EmailSender();
-		emailSender.sendEmail(sender, addresses, subject, templateName, mailBody);
+		// emailSender.sendEmail(sender, addresses, subject, templateName, mailBody);
 	}
 
 }

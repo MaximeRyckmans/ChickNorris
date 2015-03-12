@@ -73,7 +73,7 @@
     		<div class="col-xs-2"></div>
     		<div id="media-bar-left" class="col-xs-3">
     			<p>Mis nooit een lekkere deal!</p>
-    			<a class="btn btn-default btn-media" href="#">Email Updates</a>
+    			<a class="btn btn-default btn-media" href="#" data-toggle="modal" data-target="#subscribeModal">Email Updates</a>
     		</div>
     		<div class="col-xs-2">
     			<div id="media-bar-seperator"></div>

@@ -48,7 +48,7 @@
               			<li class="dropdown-header">Social Media</li>
               			<li><a href="#facebook">Facebook</a></li>
               			<li><a href="#twitter">Twitter</a></li>
-              			<li><a href="#Email">Email Updates</a></li>
+              			<li><a href="#Email" data-toggle="modal" data-target="#subscribeModal">Email Updates</a></li>
               		</ul>
               	</li>
               </ul>
