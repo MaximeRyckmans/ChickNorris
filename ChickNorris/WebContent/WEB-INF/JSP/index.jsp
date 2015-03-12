@@ -81,7 +81,7 @@
     		<div id="media-bar-right" class="col-xs-3">
     			<p>Volg je smaakpapillen!</p>
     			<div id="social-links">
-    				<a href="#"><div id="facebook"></div></a>
+    				<a href="https://www.facebook.com/heerlijkekip?pnref=lhc" target="_blank"><div id="facebook"></div></a>
     				<a href="#"><div id="twitter"></div></a>
     			</div>
     		</div>

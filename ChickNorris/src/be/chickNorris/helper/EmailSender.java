@@ -54,7 +54,7 @@ public class EmailSender {
 
 			@Override
 			protected PasswordAuthentication getPasswordAuthentication() {
-				return new PasswordAuthentication("maximeryckmans@gmail.com", "xxxxxxxx");
+				return new PasswordAuthentication("heidebitt@gmail.com", "xxxxxxxxxx");
 			}
 		});
 

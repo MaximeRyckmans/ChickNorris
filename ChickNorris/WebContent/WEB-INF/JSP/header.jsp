@@ -46,7 +46,7 @@
               			<li><a href="#connect-order">Bestel Online</a></li>
               			<li class="divider"></li>
               			<li class="dropdown-header">Social Media</li>
-              			<li><a href="#facebook">Facebook</a></li>
+              			<li><a href="https://www.facebook.com/heerlijkekip?pnref=lhc" target="_blank">Facebook</a></li>
               			<li><a href="#twitter">Twitter</a></li>
               			<li><a href="#Email" data-toggle="modal" data-target="#subscribeModal">Email Updates</a></li>
               		</ul>
