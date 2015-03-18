@@ -33,3 +33,52 @@ footer p {
 	color: #dbd1c2;
 	padding-top: 38px;
 }
+
+.content {
+	max-width: 1300px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	background-color: white;
+}
+
+hr {
+    height: 1px;
+    margin: 0 0 50px 0;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(rgba(0,0,0,0)), color-stop(0.5, white), to(rgba(0,0,0,0)));
+    background: -webkit-linear-gradient(left, rgba(0,0,0,0), white, rgba(0,0,0,0));
+    background: -moz-linear-gradient(left, rgba(0,0,0,0), white, rgba(0,0,0,0));
+    background: -o-linear-gradient(left, rgba(0,0,0,0), white, rgba(0,0,0,0));
+    background: linear-gradient(left, rgba(0,0,0,0), white, rgba(0,0,0,0));
+    border: 0;
+}
+
+    hr:after {
+        display: block;
+        content: '';
+        height: 30px;
+        background-image: -webkit-gradient(radial, 50% 0%, 0, 50% 0%, 116, color-stop(0%, white), color-stop(100%, rgba(0, 0, 0, 0)));
+        background-image: -webkit-radial-gradient(center top, farthest-side, white 0%, rgba(0, 0, 0, 0) 100%);
+        background-image: -moz-radial-gradient(center top, farthest-side, white 0%, rgba(0, 0, 0, 0) 100%);
+        background-image: -o-radial-gradient(center top, farthest-side, white 0%, rgba(0, 0, 0, 0) 100%);
+        background-image: radial-gradient(farthest-side at center top, white 0%, rgba(0, 0, 0, 0) 100%);
+    }
+
+#tabs {
+	background-color: #363636;
+	font-size: 20px;
+}
+
+#form {
+	text-align: left;
+	padding-left: 10px;
+}
+
+#form input {
+	width: 250px;
+}
+
+#map-canvas {
+	width: 600px;
+	height: 600px;
+}

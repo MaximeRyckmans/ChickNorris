@@ -21,7 +21,7 @@
 <body>
 	<div id="header"><%@include file='header.jsp'%></div>
 	<div id="content">
-		<div id="map-canvas" style="height: 500px;"></div>
+		<div id="map-canvas" class="col-xs-6" style="height: 500px;"></div>
 	</div>
 	<div id="footer"><%@include file='footer.jsp'%></div>
 	
