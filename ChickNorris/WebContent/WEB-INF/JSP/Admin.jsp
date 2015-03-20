@@ -18,13 +18,13 @@
     </header>
     <div class="content">    	 	
     	<ul id="tabs" class="nav nav-tabs">
-        	<li><a data-toggle="tab" href="#search">Zoek klant</a></li>
-        	<li><a data-toggle="tab" href="#geolocation">Geolocatie</a></li>
+    		<li><a data-toggle="tab" href="#geolocation">Geolocatie</a></li>
+        	<li><a data-toggle="tab" href="#search">Zoek klant</a></li>        	
         	<li><a data-toggle="tab" href="#sendMail">Verstuur Email</a></li>
         	<li><a data-toggle="tab" href="#calendar">Kalender</a></li>
     	</ul>
     	<div id="tabContent" class="tab-content">
-        	<div id="search" class="tab-pane fade in active">
+        	<div id="search" class="tab-pane fade">
             	<h3>Zoek klant</h3>
             	<hr/>
             	<div id="form">
@@ -36,6 +36,10 @@
   						<div class="form-group">
     						<label for="form_name">Voornaam:</label>
     						<input type="text" class="form-control" name="form_name" id="form_name" placeholder="Vul de te zoeken voornaam in.">
+  						</div>
+  						<div class="form-group">
+  							<button type="submit" class="btn btn-default">Submit</button>
+  							<button type="reset" class="btn btn-danger">Cancel</button>
   						</div>
 					</form>
 				</div>
@@ -68,26 +72,34 @@
   					</table>
   				</div>
         	</div>
-        	<div id="geolocation" class="tab-pane fade">
-            	<h3>Geolocatie</h3>
-            	<hr/>
-            	<div id="panel">
-                	<label for="address">Plaatsnaam</label>
-                    <input id="address" type="textbox" value="Brussel, Be"> 
-                    <input id="searchAddress" type="button" value="Zoek">
-                    <small>Voeg de landcode toe om een beter resultaat te verkrijgen. Ex: Brussel, BE</small>                
-                	<div class="pure-g">
-                		<div class="pure-u-1-2 pure-u-md-1-2 resultlatlong">
-                        	<label for="lat">Latitude</label>
-                        	<input type="text" name="lat" id="lat" placeholder="lat coordinate"><br>
-                        </div>
-                		<div class="pure-u-1-2 pure-u-md-1-2 resultlatlong">
-                        	<label for="lng">Longitude</label>
-                        	<input type="text" name="lng" id="lng" placeholder="long coordinate">
-                		</div>
-            		</div>
-        		</form>
-        		<div id="map-canvas"></div></div>
+        	<div id="geolocation" class="tab-pane fade in active">
+        		<h3>Geolocatie</h3>
+        		<hr/>
+        		<div id="panel">
+        			<form role="form" action="Admin.htm" method="post" >
+        				<div class="form-group">
+        					<label for="address">Plaatsnaam</label>
+        					<input id="address" type="textbox" value="Brussel">
+        					<input class="btn btn-default" id="searchAddress" type="button" value="Zoek" onclick="codeAddress()"><br/>
+        					<small>Voeg de landcode toe om een beter resultaat te verkrijgen. Ex: Brussel, BE</small><br/>
+        				</div>
+        				<div class="form-group">
+        					<label for="truckId">Identificatie Truck</label>
+        					<input id="truckId" type="textbox" placeholder="Geef de truck nummer.">
+        				</div>		
+        				<div class="form-group">
+        					<label for="lat">Latitude</label>
+        					<input id="lat" type="textbox" placeholder="lat coördinaten"><br/>
+        					<label for="long">Longitude</label>
+        					<input id="long" type="textbox" placeholder="long coördinaten">
+        				</div>
+        				<div class="form-group">
+        					<button type="submit" class="btn btn-default">Submit</button>
+        				</div>
+        			</form>    			
+       			</div>
+        		<div id="map-canvas"></div>            	
+        	</div>
         	<div id="sendMail" class="tab-pane fade">
             	<h3>Verstuur mail</h3>
             	

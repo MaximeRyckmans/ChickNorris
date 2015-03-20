@@ -82,3 +82,8 @@ hr {
 	width: 600px;
 	height: 600px;
 }
+
+#panel {
+	text-align: left;
+	padding-left: 10px;
+}
