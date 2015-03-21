@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -37,10 +38,11 @@ public class HomeServlet extends HttpServlet {
 		RequestDispatcher dispatcher = request.getRequestDispatcher(VIEW);
 		dispatcher.forward(request, response);
 
+		ServletContext context = getServletContext();
 		EmailSender emailSender = new EmailSender();
 		List<String> addresses = new ArrayList<String>();
 		addresses.add("maximeryckmans@gmail.com");
-		emailSender.sendEmail("maximeryckmans@gmail.com", addresses, "test", "template.ftl", "testBody");
+		emailSender.sendEmail(context, "maximeryckmans@gmail.com", addresses, "test", "template.ftl", "testBody");
 	}
 
 	/**
