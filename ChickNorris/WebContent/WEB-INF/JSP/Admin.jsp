@@ -168,6 +168,10 @@
             					<label for="calendarDate">Datum:</label>
             					<input type="text" id="calendarDate">
             				</div>
+            				<div class="form-group">
+            					<button type="submit" class="btn btn-danger">Verwijder</button>
+            					<button type="submit" class="btn btn-default">Toevoegen</button>  
+            				</div>
             			</form>
             		</div>            		
             	</div>
