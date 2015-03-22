@@ -87,3 +87,39 @@ hr {
 	text-align: left;
 	padding-left: 10px;
 }
+
+#mailPanel {
+	text-align: left;
+	padding-left: 10px;
+	padding-bottom: 20px;
+}
+
+#emailAddress {
+	width: 99%;
+}
+
+#emailBody {
+	width: 99%;
+}
+
+#emailTitle {
+	width: 99%;
+}
+
+#mailBtns {
+	padding-top: 20px;
+	text-align: center;
+}
+
+#calendarPanel {
+	text-align: left;
+	padding: 20px;
+}
+
+#cal {
+	width: 247px;
+}
+
+#calendarForm {
+	
+}

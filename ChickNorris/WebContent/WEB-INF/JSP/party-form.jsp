@@ -10,6 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="resources/css/header.css"/>
 	<link rel="stylesheet" type="text/css" href="resources/css/footer.css"/>
 	<link rel="stylesheet" type="text/css" href="resources/css/party-form.css"/>
+	<link rel="stylesheet" type="text/css" href="resources/css/calendar.css"/>
 	<link rel="stylesheet" type="text/css" href="resources/css/media-queries.css"/>
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Indie+Flower"/>
 	<!--[if lt IE 9]>

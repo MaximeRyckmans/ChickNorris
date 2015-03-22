@@ -9,6 +9,7 @@
 <title>Chick Norris - Admin Page</title>
 <link rel="stylesheet" type="text/css" href="resources/css/bootstrap/bootstrap.css"/>
 <link rel="stylesheet" type="text/css" href="resources/css/admin.css"/>
+<link rel="stylesheet" type="text/css" href="resources/css/calendar.css"/>
 <link rel="stylesheet" type="text/css" href="resources/css/media-queries.css"/>
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Indie+Flower"/>
 </head>
@@ -18,13 +19,13 @@
     </header>
     <div class="content">    	 	
     	<ul id="tabs" class="nav nav-tabs">
-    		<li><a data-toggle="tab" href="#geolocation">Geolocatie</a></li>
-        	<li><a data-toggle="tab" href="#search">Zoek klant</a></li>        	
-        	<li><a data-toggle="tab" href="#sendMail">Verstuur Email</a></li>
-        	<li><a data-toggle="tab" href="#calendar">Kalender</a></li>
+    		<li><a data-toggle="tab" href="#geolocationTab">Geolocatie</a></li>
+        	<li><a data-toggle="tab" href="#searchTab">Zoek klant</a></li>        	
+        	<li><a data-toggle="tab" href="#sendMailTab">Verstuur Email</a></li>
+        	<li><a data-toggle="tab" href="#calendarTab">Kalender</a></li>
     	</ul>
     	<div id="tabContent" class="tab-content">
-        	<div id="search" class="tab-pane fade">
+        	<div id="searchTab" class="tab-pane fade">
             	<h3>Zoek klant</h3>
             	<hr/>
             	<div id="form">
@@ -72,7 +73,7 @@
   					</table>
   				</div>
         	</div>
-        	<div id="geolocation" class="tab-pane fade in active">
+        	<div id="geolocationTab" class="tab-pane fade in active">
         		<h3>Geolocatie</h3>
         		<hr/>
         		<div id="panel">
@@ -100,13 +101,44 @@
        			</div>
         		<div id="map-canvas"></div>            	
         	</div>
-        	<div id="sendMail" class="tab-pane fade">
+        	<div id="sendMailTab" class="tab-pane fade">
             	<h3>Verstuur mail</h3>
-            	
+            	<hr/>
+            	<div id="mailPanel">
+            		<form role="form" action="Admin.htm" method="post" >
+            			<div class="form-group">
+            				<label for="emailAddress">Naar:</label>
+            				<input id="emailAddress" type="textbox" placeholder="Emailadressen waar u de mail naartoe wilt versturen. Ex: ChickNorris@ChickNorris.be"><br/>         				
+            				<input type="checkbox" id="mailAllUsers">
+            				<label for="mailAllUsers"><small>Verstuur email naar geabonneerden.</small></label>            				
+            			</div>
+            			<div class="form-group">
+            				<label for="emailTitle">Titel Email:</label>
+            				<input id="emailTitle" type="textbox" placeholder="Vul hier de gekozen emailtitel in.">
+            			</div>
+            			<textarea id="emailBody" class="form-control" rows="20"></textarea>
+            			<div id="mailBtns" class="form-group">
+            				<button type="reset" class="btn btn-danger">Annuleren</button>
+            				<button type="submit" class="btn btn-default">Verstuur</button>            				
+            			</div>
+            		</form>
+            	</div>
         	</div>
-        	<div id="calendar" class="tab-pane fade">
+        	<div id="calendarTab" class="tab-pane fade">
             	<h3>Kalender</h3>
-            	
+            	<hr/>
+            	<div id="calendarPanel">
+            		<div id="cal">
+            			<%@include file="calendar.jsp" %>
+            		</div>
+            		<div id="calendarForm">
+            			<form role="form" action="Admin.htm" method="post">
+            				<div class="form-group">
+            					<label for="calendarDate">Datum:</label>
+            				</div>
+            			</form>
+            		</div>            		
+            	</div>
         	</div>
     	</div>
     </div>
