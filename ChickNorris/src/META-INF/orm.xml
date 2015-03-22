@@ -10,7 +10,11 @@ http://java.sun.com/xml/ns/persistence/orm_2_0.xsd"
 		<query>select c from Customer c</query>
 	</named-query>
 	
-	<named-query name="selectCustomersByName">
+	<named-query name="selectCustomersByNameOrSurname">
+		<query>select c from Customer c where c.name=:name and c.surName=:surName</query>
+	</named-query>
+	
+	<named-query name="selectCustomersBySurname">
 	    <query>select c from Customer c where c.surName=:surName</query>
 	</named-query>
 	

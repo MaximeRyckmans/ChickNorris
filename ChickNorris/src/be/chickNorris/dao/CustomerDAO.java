@@ -36,7 +36,14 @@ public class CustomerDAO extends AbstractDAO {
 	}
 
 	public List<Customer> getCustomersByName(String surName) {
-		TypedQuery<Customer> query = getEntityManager().createNamedQuery("selectCustomersByName", Customer.class);
+		TypedQuery<Customer> query = getEntityManager().createNamedQuery("selectCustomersBySurname", Customer.class);
+		query.setParameter("surName", surName);
+		return query.getResultList();
+	}
+
+	public List<Customer> getCustomersByNameOrSurname(String name, String surName) {
+		TypedQuery<Customer> query = getEntityManager().createNamedQuery("selectCustomersByNameOrSurname", Customer.class);
+		query.setParameter("name", name);
 		query.setParameter("surName", surName);
 		return query.getResultList();
 	}

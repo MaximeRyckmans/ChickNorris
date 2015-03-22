@@ -30,14 +30,14 @@
             	<h3>Zoek klant</h3>
             	<hr/>
             	<div id="form">
-					<form role="form" action="Admin.htm" method="post" >
+					<form role="form" action="SearchCustomer.htm" method="post" >
 						<div class="form-group">
     						<label for="form_name">Naam:</label>
     						<input type="text" class="form-control" name="form_name" id="form_name" placeholder="Vul de te zoeken naam in.">
   						</div>
   						<div class="form-group">
     						<label for="form_name">Voornaam:</label>
-    						<input type="text" class="form-control" name="form_name" id="form_name" placeholder="Vul de te zoeken voornaam in.">
+    						<input type="text" class="form-control" name="form_surName" id="form_name" placeholder="Vul de te zoeken voornaam in.">
   						</div>
   						<div class="form-group">
   							<button type="submit" class="btn btn-default">Submit</button>

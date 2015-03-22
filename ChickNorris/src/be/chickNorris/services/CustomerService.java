@@ -31,4 +31,8 @@ public class CustomerService {
 	public List<Customer> getCustomersByName(String surName) {
 		return customerDAO.getCustomersByName(surName);
 	}
+
+	public List<Customer> getCustomersByNameOrSurname(String name, String surName) {
+		return customerDAO.getCustomersByNameOrSurname(name, surName);
+	}
 }
