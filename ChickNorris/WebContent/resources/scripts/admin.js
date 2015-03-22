@@ -1,5 +1,7 @@
 /**
- * 
+ * ****************************************************
+ * 						GEOLOCATION
+ * ****************************************************
  */
 var geocoder;
 var map;
@@ -43,3 +45,62 @@ function codeAddress() {
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
+
+function deleteLocation(id) {
+
+	var locationId = id;
+
+	input_box = confirm("Ben je zeker dat je deze locatie wilt verwijderen?");
+	if (input_box == true) {
+
+		
+	/*
+	 * Remove comments from ajax below and fix url of the ajax call if needed.  
+	 */	
+	/*$.ajax({
+	    url : 'Admin.htm?locationId='+locationId,
+	    type : "POST",
+	    async : false,
+	    success : function() {
+	        $("#" + locationId).remove();
+	        alert('Record(s) Deleted');
+	    }
+	});*/
+
+	    $('#' + rowid).remove();
+	    alert('Record Deleted');
+	} else {
+	// Output when Cancel is clicked
+	return false;
+	}
+}
+
+function deleteAllLocations() {
+	input_box = confirm("Ben je zeker dat je alle locaties wilt verwijderen?");
+	if (input_box == true) {
+		/*
+		 * Remove comments from ajax below and fix url of the ajax call if needed.  
+		 */	
+		/*$.ajax({
+	    url : 'Admin.htm,
+	    type : "POST",
+	    async : false,
+	    success : function() {
+	        $("#locationTable").empty();
+	        alert('Record(s) Deleted');
+	    }
+	});*/
+	} else {
+		return false;
+	}
+}
+
+/**
+ * ****************************************************
+ * 						Calendar
+ * ****************************************************
+ */
+
+$( document ).ready(function() {
+    $("#calendarDate").datepicker();
+});

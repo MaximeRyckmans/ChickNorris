@@ -8,6 +8,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Chick Norris - Admin Page</title>
 <link rel="stylesheet" type="text/css" href="resources/css/bootstrap/bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="resources/css/jquer-ui/jquery-ui.min.css"/>
 <link rel="stylesheet" type="text/css" href="resources/css/admin.css"/>
 <link rel="stylesheet" type="text/css" href="resources/css/calendar.css"/>
 <link rel="stylesheet" type="text/css" href="resources/css/media-queries.css"/>
@@ -76,7 +77,7 @@
         	<div id="geolocationTab" class="tab-pane fade in active">
         		<h3>Geolocatie</h3>
         		<hr/>
-        		<div id="panel">
+        		<div id="panel" class="container">
         			<form role="form" action="geoLocatie.htm" method="post" >
         				<div class="form-group">
         					<label for="address">Plaatsnaam</label>
@@ -97,9 +98,39 @@
         				<div class="form-group">
         					<button type="submit" class="btn btn-default">Submit</button>
         				</div>
-        			</form>    			
+        			</form>
+        			<div id="map-canvas" class="col-md-6"></div>
+        			<div id="locationList-canvas" class="col-md-6">
+        				<table id="locationTable" class="table table-bordered">
+    					<thead>
+      						<tr>
+        						<th>Trucknummer</th>
+        						<th>Latitude</th>
+        						<th>Longitude</th>
+        						<th>Verwijder</th>
+      						</tr>
+    					</thead>
+    					<tbody>
+      						<c:if test="${not empty listTrucks}">
+     							<c:forEach var="ob" varStatus="status" items="${listTrucks}">
+     								<form role="form" action="Admin.htm" action="post">
+    									<tr id="${ob.ID}">
+        									<td><c:out value="${ob.truckNumber}"/></td>
+        									<td><c:out value="${ob.latitude}"/></td>
+        									<td><c:out value="${ob.longitude}"/></td>
+        									<td><button type="submit" onclick="deleteLocation(${ob.ID})"><img src="./resources/images/trashbin.png"></button></td>
+    									</tr>
+    								</form>
+             					</c:forEach>
+            				</c:if>
+    					</tbody>
+  					</table>
+  					<div class="form-group">
+        					<button type="submit" onclick="deleteAllLocations()" class="btn btn-default">Verwijder alle locaties.</button>
+        				</div>
+        			</div>		
        			</div>
-        		<div id="map-canvas"></div>            	
+        		           	
         	</div>
         	<div id="sendMailTab" class="tab-pane fade">
             	<h3>Verstuur mail</h3>
@@ -127,14 +158,15 @@
         	<div id="calendarTab" class="tab-pane fade">
             	<h3>Kalender</h3>
             	<hr/>
-            	<div id="calendarPanel">
-            		<div id="cal">
+            	<div id="calendarPanel" class="container">
+            		<div id="cal" class="col-md-6">
             			<%@include file="calendar.jsp" %>
             		</div>
-            		<div id="calendarForm">
+            		<div id="calendarForm" class="col-md-6">
             			<form role="form" action="Admin.htm" method="post">
             				<div class="form-group">
             					<label for="calendarDate">Datum:</label>
+            					<input type="text" id="calendarDate">
             				</div>
             			</form>
             		</div>            		
@@ -150,8 +182,8 @@
     <!-- Placed at the end of the document so the pages load faster -->
 	<script type="text/javascript" src="resources/scripts/jquery.js"></script>
 	<script type="text/javascript" src="resources/scripts/bootstrap/bootstrap.min.js"></script>
+	<script type="text/javascript" src="resources/scripts/jqueryui/jquery-ui.min.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js"></script>
-	<script type="text/javascript" src="resources/scripts/template.js"></script>
 	<script type="text/javascript" src="resources/scripts/admin.js"></script>
 	<script type="text/javascript" src="resources/scripts/bootstrap/docs.min.js"></script>
 	<script type="text/javascript" src="resources/scripts/bootstrap/ie10-viewport-bug-workaround.js"></script>

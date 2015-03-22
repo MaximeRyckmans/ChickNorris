@@ -79,13 +79,11 @@ hr {
 }
 
 #map-canvas {
-	width: 600px;
 	height: 600px;
 }
 
 #panel {
-	text-align: left;
-	padding-left: 10px;
+	padding-bottom: 20px;
 }
 
 #mailPanel {
@@ -121,5 +119,6 @@ hr {
 }
 
 #calendarForm {
-	
+	padding-left: 40px;
+	margin-top: 30px;
 }
