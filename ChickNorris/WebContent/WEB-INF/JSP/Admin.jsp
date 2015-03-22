@@ -139,15 +139,15 @@
             		<form role="form" action="Admin.htm" method="post" >
             			<div class="form-group">
             				<label for="emailAddress">Naar:</label>
-            				<input id="emailAddress" type="textbox" placeholder="Emailadressen waar u de mail naartoe wilt versturen. Ex: ChickNorris@ChickNorris.be"><br/>         				
-            				<input type="checkbox" id="mailAllUsers">
+            				<input id="emailAddress" name="emailAddress" type="textbox" placeholder="Emailadressen waar u de mail naartoe wilt versturen. Ex: ChickNorris@ChickNorris.be"><br/>         				
+            				<input type="checkbox" id="mailAllUsers" name="mailAllUsers">
             				<label for="mailAllUsers"><small>Verstuur email naar geabonneerden.</small></label>            				
             			</div>
             			<div class="form-group">
             				<label for="emailTitle">Titel Email:</label>
-            				<input id="emailTitle" type="textbox" placeholder="Vul hier de gekozen emailtitel in.">
+            				<input id="emailTitle" name="emailTitle" type="textbox" placeholder="Vul hier de gekozen emailtitel in.">
             			</div>
-            			<textarea id="emailBody" class="form-control" rows="20"></textarea>
+            			<textarea id="emailBody" name="emailBody" class="form-control" rows="20"></textarea>
             			<div id="mailBtns" class="form-group">
             				<button type="reset" class="btn btn-danger">Annuleren</button>
             				<button type="submit" class="btn btn-default">Verstuur</button>            				
@@ -166,7 +166,7 @@
             			<form role="form" action="Admin.htm" method="post">
             				<div class="form-group">
             					<label for="calendarDate">Datum:</label>
-            					<input type="text" id="calendarDate">
+            					<input type="text" id="calendarDate" name="calendarDate">
             				</div>
             				<div class="form-group">
             					<button type="submit" class="btn btn-danger">Verwijder</button>
