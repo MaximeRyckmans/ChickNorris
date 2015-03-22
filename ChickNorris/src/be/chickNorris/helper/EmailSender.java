@@ -22,6 +22,7 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
+import javax.servlet.ServletContext;
 
 import freemarker.template.Configuration;
 import freemarker.template.Template;
@@ -29,18 +30,12 @@ import freemarker.template.TemplateException;
 
 public class EmailSender {
 
-	public void sendEmail(String sender, List<String> addresses, String subject, String templateName, String mailBody) {
+	public void sendEmail(ServletContext context, String sender, List<String> addresses, String subject, String templateName,
+			String mailBody) {
 
 		// here we need to load our settings for things like smtp host,...
 		Properties props = new Properties();
 		try {
-
-			// String curDir = System.getProperty("user.dir");
-			// System.out.println(curDir);
-			// File file = new File("settings.properties");
-			// System.out.println(file.getAbsolutePath() + "-----------" + file.exists());
-			// props.load(new FileInputStream(file));
-			//
 			props.load(Thread.currentThread().getContextClassLoader().getResourceAsStream("settings.properties"));
 
 		} catch (FileNotFoundException e1) {
@@ -54,7 +49,7 @@ public class EmailSender {
 
 			@Override
 			protected PasswordAuthentication getPasswordAuthentication() {
-				return new PasswordAuthentication("heidebitt@gmail.com", "xxxxxxxxxx");
+				return new PasswordAuthentication("maximeryckmans@gmail.com", "xxxxxx");
 			}
 		});
 
@@ -78,10 +73,11 @@ public class EmailSender {
 			 * rootmap of the template in which you have all the objects which you used in the template Have to think
 			 * about how to use this what you see now will be changed with our objects
 			 */
-			Map<String, String> rootMap = new HashMap<String, String>();
-			rootMap.put("to", "Bharat Sharma");
+
+			Map<String, Object> rootMap = new HashMap<String, Object>();
+
 			rootMap.put("body", mailBody);
-			rootMap.put("from", "Vijaya.");
+
 			Writer out = new StringWriter();
 			template.process(rootMap, out);
 			// freemarker stuff ends.

@@ -77,7 +77,7 @@
         		<h3>Geolocatie</h3>
         		<hr/>
         		<div id="panel">
-        			<form role="form" action="Admin.htm" method="post" >
+        			<form role="form" action="geoLocatie.htm" method="post" >
         				<div class="form-group">
         					<label for="address">Plaatsnaam</label>
         					<input id="address" type="textbox" value="Brussel">
@@ -86,13 +86,13 @@
         				</div>
         				<div class="form-group">
         					<label for="truckId">Identificatie Truck</label>
-        					<input id="truckId" type="textbox" placeholder="Geef de truck nummer.">
+        					<input name="truckId" id="truckId" type="textbox" placeholder="Geef de truck nummer.">
         				</div>		
         				<div class="form-group">
         					<label for="lat">Latitude</label>
-        					<input id="lat" type="textbox" placeholder="lat coördinaten"><br/>
+        					<input name="lat" id="lat" type="textbox" placeholder="lat coördinaten"><br/>
         					<label for="long">Longitude</label>
-        					<input id="long" type="textbox" placeholder="long coördinaten">
+        					<input name="long" id="long" type="textbox" placeholder="long coördinaten">
         				</div>
         				<div class="form-group">
         					<button type="submit" class="btn btn-default">Submit</button>

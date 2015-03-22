@@ -3,6 +3,7 @@ package be.chickNorris.models;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -13,7 +14,7 @@ import javax.persistence.Table;
 public class Customer {
 
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int ID;
 
 	private String name;
@@ -23,7 +24,7 @@ public class Customer {
 	private String companyName;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "addressID")
+	@JoinColumn(name = "Address_ID")
 	private Address address;
 
 	private String VATNumber;

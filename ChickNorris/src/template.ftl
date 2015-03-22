@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Chick Norris - Newsletter</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" type="text/css" href="<@spring.url '/EmailTemplate.css'/>"/>
+<link rel="stylesheet" type="text/css" href="${EmailTemplateCSS}/>
 </head>
 <body>
 	<table align="center" border="1" cellpadding="0" cellspacing="0">
@@ -32,7 +32,7 @@
 									<td><a href="http://www.twitter.com/"> <img id="twitter" src="${imgTwitterAsBase64}" alt="Twitter" border="0" />
 									</a></td>
 									<td style="font-size: 0; line-height: 0;" width="20">&nbsp;</td>
-									<td><a href="http://www.facebook.com/"> <img id="facebook" src="${imgFacebookAsBase64}" alt="Facebook" border="0" />
+						 			<td><a href="http://www.facebook.com/"> <img id="facebook" src="${imgFacebookAsBase64}" alt="Facebook" border="0" />
 									</a></td>
 								</tr>
 							</table>

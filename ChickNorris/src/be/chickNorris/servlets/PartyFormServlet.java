@@ -15,6 +15,8 @@ import javax.servlet.http.HttpServletResponse;
 import be.chickNorris.models.Address;
 import be.chickNorris.models.Customer;
 import be.chickNorris.models.Order;
+import be.chickNorris.services.AddressService;
+import be.chickNorris.services.CustomerService;
 import be.chickNorris.services.OrderService;
 
 /**
@@ -85,27 +87,37 @@ public class PartyFormServlet extends HttpServlet {
 
 		int formula = Integer.parseInt(request.getParameter("optionsRadios"));
 
-		Address fullAddress = new Address();
-		fullAddress.setAddress(address);
-		fullAddress.setPlace(city);
-		fullAddress.setPostalCode(postalCode);
-		Customer customer = new Customer();
-		customer.setAddress(fullAddress);
-		customer.setCompanyName(companyName);
-		customer.setEmail(email);
-		customer.setName(name);
-		customer.setSurName(surname);
-		customer.setTelNR(telNR);
-		customer.setVATNumber(vatNumber);
+		try {
+			Address fullAddress = new Address();
+			fullAddress.setAddress(address);
+			fullAddress.setPlace(city);
+			fullAddress.setPostalCode(postalCode);
+			AddressService addressService = new AddressService();
+			addressService.create(fullAddress);
 
-		Order order = new Order();
-		order.setCustomer(customer);
-		order.setEventDate(eventDate);
-		order.setEventTime(eventTime);
-		order.setOccasion(occasion);
-		order.setFormula(formula);
+			Customer customer = new Customer();
+			customer.setAddress(fullAddress);
+			customer.setCompanyName(companyName);
+			customer.setEmail(email);
+			customer.setName(name);
+			customer.setSurName(surname);
+			customer.setTelNR(telNR);
+			customer.setVATNumber(vatNumber);
+			CustomerService customerService = new CustomerService();
+			customerService.create(customer);
+			Order order = new Order();
+			order.setCustomer(customer);
+			order.setEventDate(eventDate);
+			order.setEventTime(eventTime);
+			order.setOccasion(occasion);
+			order.setFormula(formula);
 
-		OrderService orderService = new OrderService();
-		orderService.create(order);
+			OrderService orderService = new OrderService();
+			orderService.create(order);
+			response.sendRedirect("/ChickNorris//Party-Form.htm");
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
+
 	}
 }
