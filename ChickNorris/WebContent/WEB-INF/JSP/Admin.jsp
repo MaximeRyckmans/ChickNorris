@@ -30,10 +30,10 @@
             	<h3>Zoek klant</h3>
             	<hr/>
             	<div id="form">
-					<form role="form" action="Admin.htm" method="post" >
+					<form role="form" action="SearchCustomer.htm" method="post" >
 						<div class="form-group">
     						<label for="form_name">Naam:</label>
-    						<input type="text" class="form-control" name="form_name" id="form_name" placeholder="Vul de te zoeken naam in.">
+    						<input type="text" class="form-control" name="form_surName" id="form_name" placeholder="Vul de te zoeken naam in.">
   						</div>
   						<div class="form-group">
     						<label for="form_name">Voornaam:</label>
@@ -62,11 +62,11 @@
      							<c:forEach var="ob" varStatus="status" items="${listCust}">
     								<tr onclick="">
         								<td><c:out value="${ob.name}"/></td>
-        								<td><c:out value="${ob.firstName}"/></td>
+        								<td><c:out value="${ob.surName}"/></td>
         								<td><c:out value="${ob.email}"/></td>
-        								<td><c:out value="${ob.phone}"/></td>
+        								<td><c:out value="${ob.telNR}"/></td>
         								<td><c:out value="${ob.address}"/></td>
-        								<td><c:out value="${ob.occasion}"/></td>
+        						
     								</tr>
              					</c:forEach>
             				</c:if>

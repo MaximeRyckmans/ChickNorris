@@ -51,4 +51,9 @@ public class Address {
 		this.place = place;
 	}
 
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return getAddress() + ", " + getPostalCode() + ", " + getPlace();
+	}
 }
