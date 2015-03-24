@@ -28,4 +28,8 @@ public class CalendarService {
 	public List<Calendar> getAllCalendars() {
 		return calendarDAO.getAllCalendars();
 	}
+
+	public List<Calendar> selectAllReservedCalendars(boolean isReserved) {
+		return calendarDAO.selectAllReservedCalendars(isReserved);
+	}
 }

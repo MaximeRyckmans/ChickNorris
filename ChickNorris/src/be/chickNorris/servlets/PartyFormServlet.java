@@ -3,7 +3,10 @@ package be.chickNorris.servlets;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -13,9 +16,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import be.chickNorris.models.Address;
+import be.chickNorris.models.Calendar;
 import be.chickNorris.models.Customer;
 import be.chickNorris.models.Order;
 import be.chickNorris.services.AddressService;
+import be.chickNorris.services.CalendarService;
 import be.chickNorris.services.CustomerService;
 import be.chickNorris.services.OrderService;
 
@@ -40,6 +45,10 @@ public class PartyFormServlet extends HttpServlet {
 	 */
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		CalendarService calendarService = new CalendarService();
+		List<Calendar> calendarList = calendarService.selectAllReservedCalendars(true);
+		List<String> dateList = returnDates(calendarList);
+		request.setAttribute("dateList", dateList);
 		RequestDispatcher dispatcher = request.getRequestDispatcher(VIEW);
 		dispatcher.forward(request, response);
 	}
@@ -119,5 +128,29 @@ public class PartyFormServlet extends HttpServlet {
 			ex.printStackTrace();
 		}
 
+	}
+
+	private List<String> returnDates(List<Calendar> calendars) {
+		String s;
+		String e;
+		List<String> stringDates = new ArrayList<String>();
+		for (Calendar c : calendars) {
+			s = c.getStartDate().toString();
+			e = c.getEndDate().toString();
+
+			LocalDate start = LocalDate.parse(s);
+			LocalDate end = LocalDate.parse(e);
+			List<LocalDate> totalDates = new ArrayList<>();
+			while (!start.isAfter(end)) {
+				totalDates.add(start);
+				System.out.println(" " + start);
+				start = start.plusDays(1);
+			}
+			for (LocalDate l : totalDates) {
+				stringDates.add(l.toString());
+			}
+
+		}
+		return stringDates;
 	}
 }

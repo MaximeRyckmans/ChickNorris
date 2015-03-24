@@ -36,4 +36,9 @@ public class CalendarDAO extends AbstractDAO {
 		return query.getResultList();
 	}
 
+	public List<Calendar> selectAllReservedCalendars(boolean isReserved) {
+		TypedQuery<Calendar> query = getEntityManager().createNamedQuery("selectAllCalenders", Calendar.class);
+		return query.getResultList();
+	}
+
 }
