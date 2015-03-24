@@ -23,7 +23,7 @@ public class Customer {
 
 	private String companyName;
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "Address_ID")
 	private Address address;
 

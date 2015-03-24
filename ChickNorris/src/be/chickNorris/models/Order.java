@@ -20,7 +20,7 @@ public class Order {
 	@GeneratedValue
 	private int ID;
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "customerID")
 	private Customer customer;
 

@@ -29,4 +29,9 @@ http://java.sun.com/xml/ns/persistence/orm_2_0.xsd"
 		<query>select l from Location l where l.truckNumber=:truckNumber and l.locationDate= (select max(ul.locationDate) from Location as ul where ul.truckNumber = :truckNumber)</query>
 	</named-query>
 	
+	<!-- Queries voor Orders -->
+	<named-query name="selectOrdersByNameAndSurname">
+		<query>select o from Order o where o.customer.name like :name and o.customer.surName like :surName</query>
+	</named-query>
+	
 	</entity-mappings>

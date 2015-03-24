@@ -1,5 +1,7 @@
 package be.chickNorris.services;
 
+import java.util.List;
+
 import be.chickNorris.dao.OrderDAO;
 import be.chickNorris.models.Customer;
 import be.chickNorris.models.Order;
@@ -22,6 +24,10 @@ public class OrderService {
 		orderDAO.beginTransaction();
 		orderDAO.delete(ID);
 		orderDAO.commit();
+	}
+
+	public List<Order> selectOrdersByNameAndSurname(String name, String surName) {
+		return orderDAO.selectOrdersByNameAndSurname(name, surName);
 	}
 
 }

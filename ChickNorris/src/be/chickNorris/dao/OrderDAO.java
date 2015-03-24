@@ -1,5 +1,9 @@
 package be.chickNorris.dao;
 
+import java.util.List;
+
+import javax.persistence.TypedQuery;
+
 import be.chickNorris.models.Customer;
 import be.chickNorris.models.Order;
 
@@ -18,6 +22,14 @@ public class OrderDAO extends AbstractDAO {
 		if (customer != null) {
 			getEntityManager().remove(customer);
 		}
+	}
+
+	public List<Order> selectOrdersByNameAndSurname(String name, String surName) {
+		TypedQuery<Order> query = getEntityManager().createNamedQuery("selectOrdersByNameAndSurname", Order.class);
+
+		query.setParameter("name", '%' + name + '%');
+		query.setParameter("surName", '%' + surName + '%');
+		return query.getResultList();
 	}
 
 }

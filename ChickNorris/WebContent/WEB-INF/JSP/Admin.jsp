@@ -61,12 +61,12 @@
       						<c:if test="${not empty listCust}">
      							<c:forEach var="ob" varStatus="status" items="${listCust}">
     								<tr onclick="">
-        								<td><c:out value="${ob.name}"/></td>
-        								<td><c:out value="${ob.surName}"/></td>
-        								<td><c:out value="${ob.email}"/></td>
-        								<td><c:out value="${ob.telNR}"/></td>
-        								<td><c:out value="${ob.address}"/></td>
-        						
+        								<td><c:out value="${ob.customer.name}"/></td>
+        								<td><c:out value="${ob.customer.surName}"/></td>
+        								<td><c:out value="${ob.customer.email}"/></td>
+        								<td><c:out value="${ob.customer.telNR}"/></td>
+        								<td><c:out value="${ob.customer.address}"/></td>
+        								<td><c:out value="${ob.occasion}"/></td> 						
     								</tr>
              					</c:forEach>
             				</c:if>
