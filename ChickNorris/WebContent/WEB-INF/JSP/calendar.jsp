@@ -11,9 +11,9 @@
 <title>Calendar</title>
 <link rel="stylesheet" type="text/css" href="resources/css/bootstrap/bootstrap.min.css"/>
 <link rel="stylesheet" type="text/css" href="resources/css/party-form.css"/>
-<script type="text/javascript">
-	ArrayList myList= <% (ArrayList)request.getParameter("dateList") %>;
-</script>
+<!-- <script type="text/javascript">
+	ArrayList myList= <% //(ArrayList)request.getParameter("dateList") %>;
+</script> -->
 </head>
 <body>
 	<div id="calendarWrap">
