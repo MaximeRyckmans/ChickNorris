@@ -37,7 +37,11 @@ public class CalendarDAO extends AbstractDAO {
 	}
 
 	public List<Calendar> selectAllReservedCalendars(boolean isReserved) {
-		TypedQuery<Calendar> query = getEntityManager().createNamedQuery("selectAllCalenders", Calendar.class);
+		TypedQuery<Calendar> query = getEntityManager().createNamedQuery("selectAllReservedCalendars", Calendar.class);
+		Boolean b = new Boolean(isReserved);
+		String bool = b.toString();
+
+		query.setParameter("isReserved", b);
 		return query.getResultList();
 	}
 
