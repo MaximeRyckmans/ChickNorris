@@ -22,6 +22,7 @@ $(function(){
 	$("#currentMonth").text(monthNames[currentMonth]);
 	$("#currentYear").text(currentYear);
 	$("#Next").click(function() {
+		// Shows next month
 		if (currentMonth < 11) {
 			currentMonth++;
 		} else if (currentMonth === 11){
@@ -34,6 +35,7 @@ $(function(){
 	});
 
 	$("#Previous").click(function() {
+		// Shows previous month
 		if (currentMonth > 0) {
 			var month = currentMonth - 1;
 			var year = currentYear;
