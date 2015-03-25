@@ -1,6 +1,8 @@
 package be.chickNorris.servlets;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -9,6 +11,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
+import be.chickNorris.models.Location;
+import be.chickNorris.services.LocationService;
 
 /**
  * Servlet implementation class AdminServlet
@@ -31,6 +36,15 @@ public class AdminServlet extends HttpServlet {
 	 */
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		LocationService locationService = new LocationService();
+		List<Location> listTrucks = new ArrayList<Location>();
+		List<String> trucks = locationService.getAllTrucks();
+
+		for (String i : trucks) {
+			listTrucks.add(locationService.getLatestLocationByTruckNumber(i));
+		}
+		request.setAttribute("listTrucks", listTrucks);
+
 		RequestDispatcher dispatcher = request.getRequestDispatcher(VIEW);
 		dispatcher.forward(request, response);
 		HttpSession session = request.getSession(true);

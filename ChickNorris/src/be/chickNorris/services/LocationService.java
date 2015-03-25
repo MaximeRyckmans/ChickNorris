@@ -1,5 +1,7 @@
 package be.chickNorris.services;
 
+import java.util.List;
+
 import be.chickNorris.dao.LocationDAO;
 import be.chickNorris.models.Location;
 
@@ -24,6 +26,11 @@ public class LocationService {
 
 	public Location getLatestLocationByTruckNumber(String truckNumber) {
 		return locationDAO.getLatestLocationByTruckNumber(truckNumber);
+	}
+
+	public List<String> getAllTrucks() {
+
+		return locationDAO.getAllTrucks();
 	}
 
 }

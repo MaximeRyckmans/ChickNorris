@@ -1,5 +1,7 @@
 package be.chickNorris.dao;
 
+import java.util.List;
+
 import javax.persistence.TypedQuery;
 
 import be.chickNorris.models.Location;
@@ -32,6 +34,11 @@ public class LocationDAO extends AbstractDAO {
 
 		query.setParameter("truckNumber", truckNumber);
 		return query.getSingleResult();
+	}
+
+	public List<String> getAllTrucks() {
+		TypedQuery<String> query = getEntityManager().createNamedQuery("getAllTrucks", String.class);
+		return query.getResultList();
 	}
 
 }
