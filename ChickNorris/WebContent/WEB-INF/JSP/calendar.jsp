@@ -11,9 +11,9 @@
 <title>Calendar</title>
 <link rel="stylesheet" type="text/css" href="resources/css/bootstrap/bootstrap.min.css"/>
 <link rel="stylesheet" type="text/css" href="resources/css/party-form.css"/>
-<!-- <script type="text/javascript">
-	ArrayList myList= <% //(ArrayList)request.getParameter("dateList") %>;
-</script> -->
+<script type="text/javascript">
+	var myList = '${dateList}';
+</script>
 </head>
 <body>
 	<div id="calendarWrap">
@@ -47,6 +47,7 @@
 	<!-- Placed at the end of the document so the pages load faster -->
 	<script type="text/javascript" src="resources/scripts/jquery.js"></script>	
 	<script type="text/javascript" src="resources/scripts/bootstrap/bootstrap.min.js"></script>
+	<script type="text/javascript" src="resources/scripts/calendar.js"></script>
 	<script type="text/javascript" src="resources/scripts/party-form.js"></script>	
 	<script type="text/javascript" src="resources/scripts/bootstrap/docs.min.js"></script>
 	<script type="text/javascript" src="resources/scripts/bootstrap/ie10-viewport-bug-workaround.js"></script>
