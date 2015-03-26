@@ -109,7 +109,7 @@
 		<div id="formula-extrainfo">
 			<p>Hebt u zelf een idee of wenst u een gepersonaliseerd menu, contacteer ons dan via onderstaand telefoonnummer:</p>
 			<span id="phone">0484/03.63.75</span>
-			<p id="fix-costs">Forfaitaire kosten bij een event met minder dan 100 aanwezigen: 150 EUR (**)</p>
+			<p id="fix-costs">Forfaitaire kosten bij een event met minder dan 100 aanwezigen: 250 EUR (**)</p>
 			<div id="fine-print">
 				<ul>
 					<li>(*) - Bovenstaande prijzen zijn steeds Excl. BTW</li>

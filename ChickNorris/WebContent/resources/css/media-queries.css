@@ -92,4 +92,8 @@
 		padding-top: 20px;
 		height: 90px;
 	}
+	
+	#media-bar {
+		font-size: 10px;
+	}
 }

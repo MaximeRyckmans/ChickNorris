@@ -33,9 +33,6 @@
           			<img src="resources/images/slideshow/shutterstock_70256782.jpg" alt="First slide" style="width: 60%; margin-left: auto; margin-right: auto;">
           			<div class="container">
             			<div class="carousel-caption">
-              				<h1></h1>
-              				<p></p>
-              				<p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
             			</div>
           			</div>
         		</div>
@@ -43,9 +40,6 @@
           			<img src="resources/images/slideshow/shutterstock_13839559.jpg" alt="Second slide" style="width: 60%; margin-left: auto; margin-right: auto;">
           			<div class="container">
             			<div class="carousel-caption">
-              				<h1>Another example headline.</h1>
-              				<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              				<p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
             			</div>
           			</div>
         		</div>
@@ -53,9 +47,6 @@
           			<img src="resources/images/slideshow/shutterstock_184897820.jpg" alt="Third slide" style="width: 60%; margin-left: auto; margin-right: auto;">
           			<div class="container">
             			<div class="carousel-caption">
-              				<h1>One more for good measure.</h1>
-              				<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              				<p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
             			</div>
           			</div>
         		</div>
@@ -70,15 +61,14 @@
       		</a>
     	</div>
     	<div id="media-bar">
-    		<div class="col-xs-2"></div>
-    		<div id="media-bar-left" class="col-xs-3">
+    		<div id="media-bar-left" class="col-xs-5">
     			<p>Mis nooit een lekkere deal!</p>
     			<a class="btn btn-default btn-media" href="#" data-toggle="modal" data-target="#subscribeModal">Email Updates</a>
     		</div>
     		<div class="col-xs-2">
     			<div id="media-bar-seperator"></div>
     		</div>
-    		<div id="media-bar-right" class="col-xs-3">
+    		<div id="media-bar-right" class="col-xs-5">
     			<p>Volg je smaakpapillen!</p>
     			<div id="social-links">
     				<a href="https://www.facebook.com/heerlijkekip?pnref=lhc" target="_blank"><div id="facebook"></div></a>
