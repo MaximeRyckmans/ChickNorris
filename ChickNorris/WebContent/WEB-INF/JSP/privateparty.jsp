@@ -17,9 +17,6 @@
 	<![endif]-->
 </head>
 <body>
-	<!-- ===============================================================
-			TODO: Issues responsive design at 360 and below
-		 =============================================================== -->
 	<div id="header"><%@include file='header.jsp'%></div>
 	<div id="content">
 		<div class="title-page">
