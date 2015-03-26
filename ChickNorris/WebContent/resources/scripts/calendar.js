@@ -36,15 +36,17 @@ function activateCalendar(){
 
 	$("#Previous").click(function() {
 		// Shows previous month
+        var month;
+        var year;
 		if (currentMonth > 0) {
-			var month = currentMonth - 1;
-			var year = currentYear;
-			d.setFullYear(year, month, 1)
+			month = currentMonth - 1;
+			year = currentYear;
+			d.setFullYear(year, month, 1);
 			currentMonth = d.getMonth();
 		} else if (currentMonth === 0) {
-			var month = 11;
-			var year = currentYear - 1;
-			d.setFullYear(year, month, 1)
+			month = 11;
+			year = currentYear - 1;
+			d.setFullYear(year, month, 1);
 			currentMonth = d.getMonth();
 			currentYear = d.getFullYear();
 		}
@@ -66,8 +68,8 @@ function fillDays() {
 	date.setFullYear(currentYear, currentMonth, 1);
 	
 	var day = date.getDayName();
-	var comparableDay = date.getDay();
-	var comparableMonth = date.getMonth();
+	var comparableDay = date.getDay()+1;
+	var comparableMonth = date.getMonth()+1;
 	var comparableYear = date.getFullYear();
 	
 	var html;
@@ -75,10 +77,13 @@ function fillDays() {
 	var weekEnd = '</ul></div>';
 	var grayedOut = '<li></li>';
 	
-	var j = 0;
+	var j = false;
 	
 	for (var i = 1; i <= daysInMonth; i++) {
-			if(bookedDates[j] !== null && comparableDay === bookedDates[j].getDay() && comparableMonth === bookedDates[j].getMonth() && comparableYear === bookedDates[j].getFullYear()) {				
+		j = false;
+		for (var d in bookedDates){
+			if(comparableDay === d.getDay() && comparableMonth === d.getMonth() && comparableYear === d.getFullYear()) {
+				j = true;
 				if(i === 1 && day === days[1]){
 					// booked and 1st of the month on monday.
 					html = weekstart + '<li class="booked"><span>1</span></li>';
@@ -110,38 +115,40 @@ function fillDays() {
 					// booked and any other day
 					html += '<li class="booked"><span>' + i + '</span></li>';
 				}
+			}
+		}
+		if(!j) {
+			if(i === 1 && day === days[1]){
+				// 1st of the month on monday
+				html = weekStart + '<li><span>1</span></li>';
+			}  else if(i === 1 && day === days[2]){
+				// 1st of the month on tuesday
+				html = weekStart + grayedOut + '<li><span>1</span></li>';
+			}else if(i === 1 && day === days[3]){
+				// 1st of the month on wednesday
+				html = weekStart + grayedOut + grayedOut + '<li><span>1</span></li>';
+			} else if(i === 1 && day === days[4]){
+				// 1st of the month on thursday
+				html = weekStart + grayedOut + grayedOut + grayedOut +'<li><span>1</span></li>';
+			} else if(i === 1 && day === days[5]){
+				// 1st of the month on friday
+				html = weekStart + grayedOut + grayedOut + grayedOut + grayedOut + '<li><span>1</span></li>';
+			} else if(i === 1 && day === days[6]){
+				// 1st of the month on saturday
+				html = weekStart + grayedOut + grayedOut + grayedOut + grayedOut + grayedOut + '<li><span>1</span></li>';
+			} else if(i === 1 && day === days[0]){
+				// 1st of the month on sunday
+				html = weekStart + grayedOut + grayedOut + grayedOut + grayedOut + grayedOut + grayedOut +'<li><span>1</span></li>' + weekEnd;
+			} else if (day === days[1]){
+				// day is a monday
+				html += weekStart + '<li><span>' + i + '</span></li>';
+			} else if (day === days[0]){
+				// day is a sunday
+				html += '<li><span>' + i + '</span></li>' + weekEnd;
 			} else {
-				if(i === 1 && day === days[1]){
-					// 1st of the month on monday
-					html = weekStart + '<li><span>1</span></li>';
-				}  else if(i === 1 && day === days[2]){
-					// 1st of the month on tuesday
-					html = weekStart + grayedOut + '<li><span>1</span></li>';
-				}else if(i === 1 && day === days[3]){
-					// 1st of the month on wednesday
-					html = weekStart + grayedOut + grayedOut + '<li><span>1</span></li>';
-				} else if(i === 1 && day === days[4]){
-					// 1st of the month on thursday
-					html = weekStart + grayedOut + grayedOut + grayedOut +'<li><span>1</span></li>';
-				} else if(i === 1 && day === days[5]){
-					// 1st of the month on friday
-					html = weekStart + grayedOut + grayedOut + grayedOut + grayedOut + '<li><span>1</span></li>';
-				} else if(i === 1 && day === days[6]){
-					// 1st of the month on saturday
-					html = weekStart + grayedOut + grayedOut + grayedOut + grayedOut + grayedOut + '<li><span>1</span></li>';
-				} else if(i === 1 && day === days[0]){
-					// 1st of the month on sunday
-					html = weekStart + grayedOut + grayedOut + grayedOut + grayedOut + grayedOut + grayedOut +'<li><span>1</span></li>' + weekEnd;
-				} else if (day === days[1]){
-					// day is a monday
-					html += weekStart + '<li><span>' + i + '</span></li>';
-				} else if (day === days[0]){
-					// day is a sunday
-					html += '<li><span>' + i + '</span></li>' + weekEnd;
-				} else {
-					// any other day
-					html += '<li><span>' + i + '</span></li>';
-				}
+				// any other day
+				html += '<li><span>' + i + '</span></li>';
+			}
 		}
 		
 		date.setFullYear(currentYear, currentMonth, i + 1);
@@ -149,7 +156,6 @@ function fillDays() {
 		comparableDay = date.getDay();
 		comparableMonth = date.getMonth();
 		comparableYear = date.getFullYear();
-		j++;
 	}
 	
 	html += weekEnd;
@@ -163,12 +169,15 @@ function fillBookedDates(myList) {
 	var day;
 	var bookedDate;
 	
-	for (var date in myList) {
-		year = date.slice(0,4);
-		month = date.slice(5,7);
-		day = date.slice(8,10);
-		
-		bookedDate = new Date(year, month, day);
-		bookedDates.push(bookedDate);
-	}
+	if (myList !== null) {
+		for (var date in myList) {
+			year = date.slice(0,4);
+			month = date.slice(5,7);
+			day = date.slice(8,10);
+			
+			bookedDate = new Date(year, month, day);
+			bookedDates.push(bookedDate);
+		}
+	}	
+	
 }
