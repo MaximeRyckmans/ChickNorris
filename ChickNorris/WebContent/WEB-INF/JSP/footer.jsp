@@ -6,18 +6,15 @@
 		<li class="col-xs-12 col-md-2">
   			<a id="lnk_food" href="#mnu_food" data-toggle="collapse" data-parent="#footer-menu"><h4>CN Food</h3></a>
       		<ul class="mnu collapse in" id="mnu_food">
-      			<li><a href="#">CN Menu</a></li>
-      			<li><a href="#">Bestel Online</a></li>
-      			<li><a href="#">Catering</a></li>
+      			<li><a href="PrivateParty.htm">CN Menu</a></li>
       		</ul>
   		</li>
   		<li class="col-xs-12 col-md-2">
   			<a id="lnk_info" href="#mnu_info" data-toggle="collapse" data-parent="#footer-menu"><h4>CN Info</h3></a>
     		<ul class="mnu collapse in" id="mnu_info">
-    			<li><a href="#">About CN</a></li>
+    			<li><a href="About.htm">About CN</a></li>
     			<li><a href="#">CN Nieuws</a></li>
-    			<li><a href="#">CN Policies</a></li>
-    			<li><a href="#">Legal</a></li>
+    			<li><a href="#">CN Legal</a></li>
     		</ul>    				
   		</li>
   		<li class="col-xs-12 col-md-2">
@@ -26,7 +23,7 @@
 				<li><a href="#">CN On Tour</a></li>
       			<li><a href="PrivateParty.htm">CN Private Party</a></li>
       			<li><a href="#">CN Corporate Events</a></li>
-      			<li><a href="#">CN Event Sponsoring</a></li>
+      			<!-- <li><a href="#">CN Event Sponsoring</a></li> -->
 			</ul>
   		</li>
   		<li class="col-xs-12 col-md-2">
@@ -39,10 +36,10 @@
   			<a id="lnk_connect" href="#mnu_connect" data-toggle="collapse" data-parent="#footer-menu"><h4>CN Connect</h3></a>
     		<ul class="mnu collapse in" id="mnu_connect">
       			<li><a href="#">Contact CN</a></li>
-      			<li><a href="#">Bestel Online</a></li>
-      			<li><a href="#">Facebook</a></li>
-      			<li><a href="#">Twitter</a></li>
-      			<li><a href="#">CN mail subscription</a></li>
+      			<!-- <li><a href="#">Bestel Online</a></li> -->
+      			<li><a target="_blank" href="https://www.facebook.com/heerlijkekip?pnref=lhc">Facebook</a></li>
+      			<li><a target="_blank" href="#">Twitter</a></li>
+      			<li><a href="#Email" data-toggle="modal" data-target="#subscribeModal">CN mail subscription</a></li>
     		</ul>
   		</li>
   	</ul> <!-- END footer-menu -->
