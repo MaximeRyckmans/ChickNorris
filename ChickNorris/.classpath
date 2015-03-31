@@ -16,6 +16,6 @@
 	<classpathentry kind="lib" path="/home/java/Downloads/javamail-1.4.7/mail.jar"/>
 	<classpathentry kind="lib" path="/home/java/Downloads/activation.jar"/>
 	<classpathentry kind="lib" path="/home/java/Downloads/freemarker.jar"/>
-	<classpathentry kind="lib" path="/home/java/Desktop/google-gson-2.2.4/gson-2.2.4.jar"/>
+	<classpathentry kind="lib" path="/home/java/Desktop/gson-2.2.4.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
