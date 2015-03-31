@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" 
+    uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -21,7 +23,26 @@
 <body>
 	<div id="header"><%@include file='header.jsp'%></div>
 	<div id="content">
-		<div id="map-canvas" class="col-xs-6" style="height: 500px;"></div>
+		<div id="map-canvas" class="col-md-6" style="height: 500px;"></div>
+		<div id="map-addresses" class="col-md-6">
+			<c:if test="${not empty listLocations}">
+     			<c:forEach var="ob" varStatus="status" items="${listLocations}">
+    				<div class="panel panel-default col-md-6">
+						<div class="panel-heading">
+        					<a class="panel-title" data-toggle="collapse" data-target="#collapseOne">Stad</a>
+    					</div>
+    					<div id="collapseOne" class="panel-collapse collapse">
+							<div class="panel-body">
+								<ul>
+									<li>straat en nummer</li>
+									<li>Postcode en stad</li>
+								</ul>						
+							</div>
+						</div>
+					</div>
+             	</c:forEach>
+            </c:if>			
+		</div>
 	</div>
 	<div id="footer"><%@include file='footer.jsp'%></div>
 	

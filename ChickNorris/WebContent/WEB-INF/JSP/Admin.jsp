@@ -81,7 +81,9 @@
         			<form role="form" action="geoLocatie.htm" method="post" >
         				<div class="form-group">
         					<label for="address">Plaatsnaam</label>
-        					<input id="address" type="textbox" value="Brussel">
+        					<input id="address" name="address" type="textbox" value="Brussel">
+        					<label for="region">Regio</label>
+        					<input id="region" name="region" type="textbox" placeholder="Brussel">
         					<input class="btn btn-default" id="searchAddress" type="button" value="Zoek" onclick="codeAddress()"><br/>
         					<small>Voeg de landcode toe om een beter resultaat te verkrijgen. Ex: Brussel, BE</small><br/>
         				</div>
