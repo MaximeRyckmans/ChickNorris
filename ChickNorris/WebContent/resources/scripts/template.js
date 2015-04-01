@@ -1,13 +1,13 @@
 
 
-$( document ).ready(function(){
+function startTemplate(){
   window.onload = processBodies($(window).width());
   $("#lnk_food").addEventListener('click', collapseFood($(window).width()));
   $("#lnk_info").addEventListener('click', collapseInfo($(window).width()));
   $("#lnk_my").addEventListener('click', collapseMy($(window).width()));
   $("#lnk_careers").addEventListener('click', collapseCareers($(window).width()));
   $("#lnk_connect").addEventListener('click', collapseConnect($(window).width()));
-});
+}
 
 $(window).resize(function() {    // Optional: if you want to detect when the window is resized;
       processBodies($(window).width());

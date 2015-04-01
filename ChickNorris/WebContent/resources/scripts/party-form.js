@@ -5,8 +5,14 @@
 var myList;
 
 $(function(){
-	$.get('Part-Form.htm', function(dateList) {
-		myList = dateList;
-	});
+	startTemplate();
+	$.ajax({
+		  dataType: "json",
+		  url: "Party-Form.htm",
+		  data: dateList,
+		  success: function(dateList){
+			  myList = dateList;
+		  }
+		});
 	activateCalendar();
 });

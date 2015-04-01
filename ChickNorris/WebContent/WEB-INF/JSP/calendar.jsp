@@ -44,8 +44,7 @@
 	<!-- Placed at the end of the document so the pages load faster -->
 	<script type="text/javascript" src="resources/scripts/jquery.js"></script>	
 	<script type="text/javascript" src="resources/scripts/bootstrap/bootstrap.min.js"></script>
-	<script type="text/javascript" src="resources/scripts/calendar.js"></script>
-	<script type="text/javascript" src="resources/scripts/party-form.js"></script>	
+	<script type="text/javascript" src="resources/scripts/calendar.js"></script>	
 	<script type="text/javascript" src="resources/scripts/bootstrap/docs.min.js"></script>
 	<script type="text/javascript" src="resources/scripts/bootstrap/ie10-viewport-bug-workaround.js"></script>
 </body>
