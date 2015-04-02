@@ -42,6 +42,8 @@ public class GeoLocationServlet extends HttpServlet {
 		String truckNumber = request.getParameter("truckId");
 		String lat = request.getParameter("lat");
 		String longitude = request.getParameter("long");
+		String locAddress = request.getParameter("address");
+		String region = request.getParameter("region");
 		Date localDate = new Date();
 
 		Location location = new Location();
@@ -49,6 +51,8 @@ public class GeoLocationServlet extends HttpServlet {
 		location.setLongitude(longitude);
 		location.setTruckNumber(truckNumber);
 		location.setLocationDate(localDate);
+		location.setLocAddress(locAddress);
+		location.setRegion(region);
 
 		LocationService locationService = new LocationService();
 		locationService.create(location);

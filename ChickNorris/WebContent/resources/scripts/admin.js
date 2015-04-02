@@ -77,22 +77,23 @@ function deleteLocation(id) {
 
 	input_box = confirm("Ben je zeker dat je deze locatie wilt verwijderen?");
 	if (input_box == true) {
-
+		var parameter= "locationId="+locationId;
 		
 	/*
 	 * Remove comments from ajax below and fix url of the ajax call if needed.  
 	 */	
-	/*$.ajax({
-	    url : 'Admin.htm?locationId='+locationId,
+	$.ajax({
+	    url : "Admin.htm",
 	    type : "POST",
-	    async : false,
+	    async : true,
+	    data : parameter,
 	    success : function() {
 	        $("#" + locationId).remove();
-	        alert('Record(s) Deleted');
+	      /*  alert('Record(s) Deleted');*/
 	    }
-	});*/
+	});
 
-	    $('#' + rowid).remove();
+	    $('#' + id).remove();
 	    alert('Record Deleted');
 	} else {
 	// Output when Cancel is clicked
@@ -106,15 +107,15 @@ function deleteAllLocations() {
 		/*
 		 * Remove comments from ajax below and fix url of the ajax call if needed.  
 		 */	
-		/*$.ajax({
-	    url : 'Admin.htm,
+		$.ajax({
+	    url : 'Admin.htm',
 	    type : "POST",
-	    async : false,
+	    async : true,
 	    success : function() {
 	        $("#locationTable").empty();
 	        alert('Record(s) Deleted');
 	    }
-	});*/
+	});
 	} else {
 		return false;
 	}

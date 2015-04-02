@@ -58,6 +58,18 @@ public class AdminServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// EmailSender emailSender = new EmailSender();
 		// emailSender.sendEmail(sender, addresses, subject, templateName, mailBody);
+
+		String locationId = request.getParameter("locationId");
+
+		System.out.println(locationId + "<------------------------------------------------------------------");
+		LocationService locationService = new LocationService();
+		if (locationId != null) {
+			int ID = Integer.parseInt(locationId);
+			locationService.delete(ID);
+		} else {
+			locationService.deleteAllLocations();
+		}
+
 	}
 
 }

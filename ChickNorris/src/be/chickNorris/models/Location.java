@@ -19,6 +19,8 @@ public class Location {
 	private String truckNumber;
 	private String latitude;
 	private String longitude;
+	private String locAddress;
+	private String region;
 
 	public String getLatitude() {
 		return latitude;
@@ -58,6 +60,22 @@ public class Location {
 
 	public void setTruckNumber(String truckNumber) {
 		this.truckNumber = truckNumber;
+	}
+
+	public String getLocAddress() {
+		return locAddress;
+	}
+
+	public void setLocAddress(String locAddress) {
+		this.locAddress = locAddress;
+	}
+
+	public String getRegion() {
+		return region;
+	}
+
+	public void setRegion(String region) {
+		this.region = region;
 	}
 
 }

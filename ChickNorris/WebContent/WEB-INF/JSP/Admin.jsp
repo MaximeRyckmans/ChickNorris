@@ -120,6 +120,8 @@
         									<td><c:out value="${ob.truckNumber}"/></td>
         									<td><c:out value="${ob.latitude}"/></td>
         									<td><c:out value="${ob.longitude}"/></td>
+        									<td><c:out value="${ob.locAddress}"/></td>
+        									<td><c:out value="${ob.region}"/></td>
         									<td><button type="submit" onclick="deleteLocation(${ob.ID})"><img id="img-trashbin" src="./resources/images/trashbin.png"></button></td>
     									</tr>
     								</form>

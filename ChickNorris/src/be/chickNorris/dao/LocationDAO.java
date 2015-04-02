@@ -2,6 +2,7 @@ package be.chickNorris.dao;
 
 import java.util.List;
 
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 
 import be.chickNorris.models.Location;
@@ -21,6 +22,12 @@ public class LocationDAO extends AbstractDAO {
 		if (location != null) {
 			getEntityManager().remove(location);
 		}
+	}
+
+	public int deleteAllLocations() {
+		Query query = getEntityManager().createNamedQuery("deleteAllLocations");
+
+		return query.executeUpdate();
 	}
 
 	/**

@@ -37,6 +37,11 @@ http://java.sun.com/xml/ns/persistence/orm_2_0.xsd"
 		<query>select distinct l.truckNumber from Location l</query>
 	</named-query>
 	
+	<named-query name="deleteAllLocations">
+		<query><![CDATA[ delete from Location]]></query>
+	</named-query>
+
+	
 	<!-- Queries voor Orders -->
 	<named-query name="selectOrdersByNameAndSurname">
 		<query>select o from Order o where o.customer.name like :name and o.customer.surName like :surName</query>

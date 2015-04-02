@@ -33,4 +33,11 @@ public class LocationService {
 		return locationDAO.getAllTrucks();
 	}
 
+	public int deleteAllLocations() {
+		locationDAO.beginTransaction();
+		int numberOfDeletes = locationDAO.deleteAllLocations();
+		locationDAO.commit();
+		return numberOfDeletes;
+	}
+
 }

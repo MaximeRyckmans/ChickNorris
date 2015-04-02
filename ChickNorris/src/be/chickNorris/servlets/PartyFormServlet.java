@@ -27,8 +27,6 @@ import be.chickNorris.services.CalendarService;
 import be.chickNorris.services.CustomerService;
 import be.chickNorris.services.OrderService;
 
-import com.google.gson.Gson;
-
 /**
  * Servlet implementation class PartyFormServlet
  */
@@ -53,9 +51,10 @@ public class PartyFormServlet extends HttpServlet {
 		CalendarService calendarService = new CalendarService();
 		List<Calendar> calendarList = calendarService.selectAllReservedCalendars(true);
 		List<String> dateList = returnDates(calendarList);
-		response.setContentType("application/json");
-		response.setCharacterEncoding("UTF-8");
-		response.getWriter().write(new Gson().toJson(dateList));
+		// response.setContentType("application/json");
+		// response.setCharacterEncoding("UTF-8");
+		// response.getWriter().write(new Gson().toJson(dateList));
+		request.setAttribute("dateList", dateList);
 		RequestDispatcher dispatcher = request.getRequestDispatcher(VIEW);
 		dispatcher.forward(request, response);
 	}
