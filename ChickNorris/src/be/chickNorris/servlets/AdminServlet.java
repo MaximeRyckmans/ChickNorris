@@ -12,7 +12,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import be.chickNorris.models.Calendar;
 import be.chickNorris.models.Location;
+import be.chickNorris.services.CalendarService;
 import be.chickNorris.services.LocationService;
 
 /**
@@ -37,9 +39,13 @@ public class AdminServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		LocationService locationService = new LocationService();
+		CalendarService calendarService = new CalendarService();
+		List<Calendar> calendarList = new ArrayList<Calendar>();
 		List<Location> listTrucks = new ArrayList<Location>();
 		List<String> trucks = locationService.getAllTrucks();
+		List<String> dateList = calendarService.returnDates(calendarList);
 
+		request.setAttribute("dateList", dateList);
 		for (String i : trucks) {
 			listTrucks.add(locationService.getLatestLocationByTruckNumber(i));
 		}
@@ -61,7 +67,6 @@ public class AdminServlet extends HttpServlet {
 
 		String locationId = request.getParameter("locationId");
 
-		System.out.println(locationId + "<------------------------------------------------------------------");
 		LocationService locationService = new LocationService();
 		if (locationId != null) {
 			int ID = Integer.parseInt(locationId);

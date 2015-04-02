@@ -167,14 +167,16 @@
             			<%@include file="calendar.jsp" %>
             		</div>
             		<div id="calendarForm" class="col-md-6">
-            			<form role="form" action="Admin.htm" method="post">
+            			<form role="form" action="Calendar.htm" method="post">
             				<div class="form-group">
-            					<label for="calendarDate">Datum:</label>
-            					<input type="text" id="calendarDate" name="calendarDate">
+            					<label for="calendarStartDate">Startdatum:</label>
+            					<input type="text" id="calendarStartDate" name="calendarStartDate">
+            					<label for="calendarEndDate">Einddatum:</label>
+            					<input type="text" id="calendarEndDate" name="calendarEndDate">
             				</div>
             				<div class="form-group">
-            					<button type="submit" class="btn btn-danger">Verwijder</button>
-            					<button type="submit" class="btn btn-default">Toevoegen</button>  
+            					<button type="submit" name="removeDate" class="btn btn-danger">Verwijder</button>
+            					<button type="submit" name="addDate" class="btn btn-default">Toevoegen</button>  
             				</div>
             			</form>
             		</div>            		

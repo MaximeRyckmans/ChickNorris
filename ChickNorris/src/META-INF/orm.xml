@@ -28,6 +28,8 @@ http://java.sun.com/xml/ns/persistence/orm_2_0.xsd"
 		<query>select c from Calendar c where c.isReserved=:isReserved</query>
 	</named-query>
 	
+
+	
 	<!-- Queries voor Location -->
 	<named-query name="getLatestLocationByTruckNumber">
 		<query>select l from Location l where l.truckNumber=:truckNumber and l.locationDate= (select max(ul.locationDate) from Location as ul where ul.truckNumber = :truckNumber)</query>
