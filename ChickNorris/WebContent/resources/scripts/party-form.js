@@ -2,17 +2,6 @@
  * 
  */
 
-var myList;
-
-$(function(){
-	startTemplate();
-	$.ajax({
-		  dataType: "json",
-		  url: "Party-Form.htm",
-		  data: dateList,
-		  success: function(dateList){
-			  myList = dateList;
-		  }
-		});
+$( document ).ready(function() {
 	activateCalendar();
 });
