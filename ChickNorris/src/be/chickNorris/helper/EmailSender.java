@@ -9,6 +9,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 
+import javax.activation.DataHandler;
+import javax.activation.DataSource;
+import javax.activation.FileDataSource;
 import javax.mail.Authenticator;
 import javax.mail.BodyPart;
 import javax.mail.Message;
@@ -32,6 +35,9 @@ public class EmailSender {
 
 	public void sendEmail(ServletContext context, String sender, List<String> addresses, String subject, String templateName,
 			String mailBody) {
+
+		String logo = context.getRealPath("/resources/images/logo.png");
+		String fb = context.getRealPath("/resources/images/facebook.png");
 
 		// here we need to load our settings for things like smtp host,...
 		Properties props = new Properties();
@@ -62,7 +68,6 @@ public class EmailSender {
 			message.setSubject(subject);
 
 			BodyPart body = new MimeBodyPart();
-
 			// freemarker stuff.
 			Configuration cfg = new Configuration();
 			cfg.setClassForTemplateLoading(this.getClass(), "/");
@@ -77,15 +82,45 @@ public class EmailSender {
 			Map<String, Object> rootMap = new HashMap<String, Object>();
 
 			rootMap.put("body", mailBody);
+			rootMap.put("imgLogoAsBase64", "<img src=\"cid:image\">");
+			rootMap.put("imgFacebookAsBase64", "<img src=\"cid:fb\">");
 
 			Writer out = new StringWriter();
 			template.process(rootMap, out);
 			// freemarker stuff ends.
-
 			/* you can add html tags in your text to decorate it. */
 			body.setContent(out.toString(), "text/html");
 
 			Multipart multipart = new MimeMultipart();
+			multipart.addBodyPart(body);
+
+			// first part (the html)
+			// BodyPart messageBodyPart = new MimeBodyPart();
+			// String htmlText = "<img src=\"cid:image\">";
+			// messageBodyPart.setContent(htmlText, "text/html");
+			// add it
+			// multipart.addBodyPart(messageBodyPart);
+			// second part (the image)
+			body = new MimeBodyPart();
+			DataSource fds = new FileDataSource(logo);
+
+			body.setDataHandler(new DataHandler(fds));
+			body.setFileName("logo.png");
+			body.setDisposition(MimeBodyPart.INLINE);
+			body.setHeader("Content-ID", "<image>");
+
+			// add image to the multipart
+			multipart.addBodyPart(body);
+
+			body = new MimeBodyPart();
+			fds = new FileDataSource(fb);
+
+			body.setDataHandler(new DataHandler(fds));
+			body.setFileName("fb.png");
+			body.setDisposition(MimeBodyPart.INLINE);
+			body.setHeader("Content-ID", "<fb>");
+
+			// add image to the multipart
 			multipart.addBodyPart(body);
 
 			// body = new MimeBodyPart();
@@ -100,13 +135,7 @@ public class EmailSender {
 
 			Transport.send(message);
 
-		} catch (MessagingException e) {
-			e.printStackTrace();
-		} catch (TemplateException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
+		} catch (MessagingException | IOException | TemplateException e) {
 			e.printStackTrace();
 		}
 
