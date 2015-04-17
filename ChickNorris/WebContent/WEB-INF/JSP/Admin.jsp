@@ -195,6 +195,7 @@
 	<script type="text/javascript" src="resources/scripts/jqueryui/jquery-ui.min.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js"></script>
 	<script type="text/javascript" src="resources/scripts/admin.js"></script>
+	<script type="text/javascript" src="resources/scripts/calendar.js"></script>
 	<script type="text/javascript" src="resources/scripts/bootstrap/docs.min.js"></script>
 	<script type="text/javascript" src="resources/scripts/bootstrap/ie10-viewport-bug-workaround.js"></script>
 </body>

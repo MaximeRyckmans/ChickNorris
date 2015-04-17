@@ -8,23 +8,23 @@
 </head>
 <body>
 	<table align="center" border="1" cellpadding="0" cellspacing="0">
-		<tr>
+		<tr style="background-color: #85150f;">
 			<td id="header" align="center">
 				${imgLogoAsBase64}
 			</td>
 		</tr>
 		<tr>
-			<td id="bodyText" align="center">
+			<td id="bodyText" align="center" style="background-color: #dbd1c2;">
 				${body}
 			</td>
 		</tr>
 		<tr>
-			<td id="footer">
+			<td id="footer" style="background-color: #363636; color: white;">
 				<table id="tableFooter" border="0" cellpadding="0" cellspacing="0">
 					<tr>
 						<td id="footerLeft">
 							&reg; Pulinx Wim, Maasmechelen 2015<br/>
- 							<a id="unsubscribe" href="#">Unsubscribe</a> to this newsletter instantly.
+ 							<a id="unsubscribe" href="#" style="color: #e9500e;">Unsubscribe</a> to this newsletter instantly.
 						</td>
 						<td align="right">
 							<table border="0" cellpadding="0" cellspacing="0">
