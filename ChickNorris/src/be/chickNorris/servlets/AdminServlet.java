@@ -40,7 +40,7 @@ public class AdminServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		LocationService locationService = new LocationService();
 		CalendarService calendarService = new CalendarService();
-		List<Calendar> calendarList = new ArrayList<Calendar>();
+		List<Calendar> calendarList = calendarService.selectAllReservedCalendars(true);
 		List<Location> listTrucks = new ArrayList<Location>();
 		List<String> trucks = locationService.getAllTrucks();
 		List<String> dateList = calendarService.returnDates(calendarList);
