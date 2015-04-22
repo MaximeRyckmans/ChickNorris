@@ -1,0 +1,18 @@
+@CHARSET "UTF-8";
+
+h3 {
+	text-align: center;
+	font-weight: bold;
+}
+
+h4 {
+	font-weight: bold;
+}
+
+.container {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#bottom-p {
+	padding-bottom: 50px;
+}
