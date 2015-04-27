@@ -33,6 +33,10 @@ public class LocationService {
 		return locationDAO.getAllTrucks();
 	}
 
+	public List<Location> getAllLocations() {
+		return locationDAO.getAllLocations();
+	}
+
 	public int deleteAllLocations() {
 		locationDAO.beginTransaction();
 		int numberOfDeletes = locationDAO.deleteAllLocations();

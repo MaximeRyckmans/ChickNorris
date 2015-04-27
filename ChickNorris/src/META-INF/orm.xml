@@ -39,6 +39,10 @@ http://java.sun.com/xml/ns/persistence/orm_2_0.xsd"
 		<query>select distinct l.truckNumber from Location l</query>
 	</named-query>
 	
+	<named-query name="getAllLocations">
+		<query>from Location l</query>
+	</named-query>
+	
 	<named-query name="deleteAllLocations">
 		<query><![CDATA[ delete from Location]]></query>
 	</named-query>

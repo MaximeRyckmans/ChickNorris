@@ -140,7 +140,7 @@
             	<h3>Verstuur mail</h3>
             	<hr/>
             	<div id="mailPanel">
-            		<form role="form" action="Admin.htm" method="post" >
+            		<form role="form" action="Mail.htm" method="post" >
             			<div class="form-group">
             				<label for="emailAddress">Naar:</label>
             				<input id="emailAddress" name="emailAddress" type="textbox" placeholder="Emailadressen waar u de mail naartoe wilt versturen. Ex: ChickNorris@ChickNorris.be"><br/>         				

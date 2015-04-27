@@ -30,10 +30,15 @@ public class LocationDAO extends AbstractDAO {
 		return query.executeUpdate();
 	}
 
+	public List<Location> getAllLocations() {
+		TypedQuery<Location> query = getEntityManager().createNamedQuery("getAllLocations", Location.class);
+		return query.getResultList();
+	}
+
 	/**
-	 * Returns a list of Customer objects.
+	 * Returns a list of Location objects.
 	 *
-	 * @param projectCode
+	 *
 	 * @return
 	 */
 	public Location getLatestLocationByTruckNumber(String truckNumber) {
