@@ -38,23 +38,29 @@ public class AdminServlet extends HttpServlet {
 	 */
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		LocationService locationService = new LocationService();
-		CalendarService calendarService = new CalendarService();
-		List<Calendar> calendarList = calendarService.selectAllReservedCalendars(true);
-		List<Location> listTrucks = new ArrayList<Location>();
-		List<String> trucks = locationService.getAllTrucks();
-		List<String> dateList = calendarService.returnDates(calendarList);
+		HttpSession session = request.getSession();
 
-		request.setAttribute("dateList", dateList);
-		for (String i : trucks) {
-			listTrucks.add(locationService.getLatestLocationByTruckNumber(i));
+		if (session.getAttribute("loggedIn") == null) {
+			response.sendRedirect("/ChickNorris/Login.htm");
+		} else {
+			LocationService locationService = new LocationService();
+			CalendarService calendarService = new CalendarService();
+			List<Calendar> calendarList = calendarService.selectAllReservedCalendars(true);
+			List<Location> listTrucks = new ArrayList<Location>();
+			List<String> trucks = locationService.getAllTrucks();
+			List<String> dateList = calendarService.returnDates(calendarList);
+
+			request.setAttribute("dateList", dateList);
+			for (String i : trucks) {
+				listTrucks.add(locationService.getLatestLocationByTruckNumber(i));
+			}
+			request.setAttribute("listTrucks", listTrucks);
+
+			RequestDispatcher dispatcher = request.getRequestDispatcher(VIEW);
+			dispatcher.forward(request, response);
+			session.removeAttribute("listCust");
 		}
-		request.setAttribute("listTrucks", listTrucks);
 
-		RequestDispatcher dispatcher = request.getRequestDispatcher(VIEW);
-		dispatcher.forward(request, response);
-		HttpSession session = request.getSession(true);
-		session.removeAttribute("listCust");
 	}
 
 	/**
