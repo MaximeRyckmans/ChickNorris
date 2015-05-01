@@ -13,7 +13,8 @@ public class User {
 	@GeneratedValue
 	private int ID;
 	private String username;
-	private String password;
+	private byte[] password;
+	private byte[] salt;
 
 	public int getID() {
 		return ID;
@@ -31,12 +32,20 @@ public class User {
 		this.username = username;
 	}
 
-	public String getPassword() {
+	public byte[] getPassword() {
 		return password;
 	}
 
-	public void setPassword(String password) {
+	public void setPassword(byte[] password) {
 		this.password = password;
+	}
+
+	public byte[] getSalt() {
+		return salt;
+	}
+
+	public void setSalt(byte[] salt) {
+		this.salt = salt;
 	}
 
 }
