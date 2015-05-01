@@ -29,13 +29,12 @@
      			<c:forEach var="ob" varStatus="status" items="${listLocations}">
     				<div class="panel panel-default col-md-6">
 						<div class="panel-heading">
-        					<a class="panel-title" data-toggle="collapse" data-target="#collapseOne">Stad</a>
+        					<a class="panel-title" data-toggle="collapse" data-target="#collapseOne">${ob.region}</a>
     					</div>
     					<div id="collapseOne" class="panel-collapse collapse">
 							<div class="panel-body">
 								<ul>
-									<li>straat en nummer</li>
-									<li>Postcode en stad</li>
+									<li>${ob.locAddress}</li>
 								</ul>						
 							</div>
 						</div>
@@ -56,5 +55,13 @@
 	<script type="text/javascript" src="resources/scripts/Localize.js"></script>
 	<script type="text/javascript" src="resources/scripts/bootstrap/docs.min.js"></script>
 	<script type="text/javascript" src="resources/scripts/bootstrap/ie10-viewport-bug-workaround.js"></script>
+	<script type="text/javascript">
+		var myList = [
+  			<c:forEach var="item" items="${listLocations}" varStatus="loop">
+    			"${item.longitude}", "${item.latitude}"
+    			<c:if test="${!loop.last}">,</c:if>
+  			</c:forEach>
+		]
+	</script>
 </body>
 </html>

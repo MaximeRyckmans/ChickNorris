@@ -30,7 +30,7 @@
               <ul class="nav navbar-nav">
                 <li id="home"><a href="Home.htm">Home</a></li>
                 <li><a href="About.htm">About CN</a></li>
-                <li><a href="#tour">CN on Tour</a></li>
+                <li><a href="Localize.htm">CN on Tour</a></li>
                 <li class="dropdown">
                   <a href="#catering" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">CN Catering <span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
