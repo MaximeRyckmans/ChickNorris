@@ -17,6 +17,7 @@
 <body>
 	<header id="nav-wrapper">
         <a href="Home.htm"><div id="logo"></div></a>
+        <a href="Login.htm">logout</a>
     </header>
     <div class="content">    	 	
     	<ul id="tabs" class="nav nav-tabs">

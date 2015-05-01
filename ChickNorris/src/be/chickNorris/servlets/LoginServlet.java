@@ -10,6 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import be.chickNorris.models.User;
+import be.chickNorris.services.UserService;
+
 /**
  * Servlet implementation class LoginServlet
  */
@@ -42,11 +45,18 @@ public class LoginServlet extends HttpServlet {
 	 */
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+		UserService userService = new UserService();
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 
-		if (username.equals("test") && password.equals("test")) {
+		User user = userService.findUserByName(username);
+		boolean isValid;
+		if (user == null) {
+			isValid = false;
+		} else {
+			isValid = userService.checkAuthentication(user, username, password);
+		}
+		if (isValid) {
 			HttpSession session = request.getSession(false);
 			session.setAttribute("loggedIn", true);
 
