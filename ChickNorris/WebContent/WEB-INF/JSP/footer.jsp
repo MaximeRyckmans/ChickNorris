@@ -61,8 +61,8 @@
     							<input type="text" class="form-control" name="form_email" id="form_email" placeholder="Vul je email in.">
   							</div>
   							<div class="modal-footer">
-        				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        				<button type="button" class="btn btn-primary">Save changes</button>
+        				<button type="reset" class="btn btn-default" data-dismiss="modal">Close</button>
+        				<button type="submit" class="btn btn-primary">Save changes</button>
       				</div>
         				</form>
       				</div>
