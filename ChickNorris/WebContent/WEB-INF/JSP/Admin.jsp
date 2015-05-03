@@ -8,7 +8,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Chick Norris - Admin Page</title>
 <link rel="stylesheet" type="text/css" href="resources/css/bootstrap/bootstrap.css"/>
-<link rel="stylesheet" type="text/css" href="resources/css/jquer-ui/jquery-ui.min.css"/>
+<link rel="stylesheet" type="text/css" href="resources/JquerUI/jquery-ui.min.css"/>
 <link rel="stylesheet" type="text/css" href="resources/bbcode/minified/themes/default.min.css"/>
 <link rel="stylesheet" type="text/css" href="resources/css/admin.css"/>
 <link rel="stylesheet" type="text/css" href="resources/css/calendar.css"/>
@@ -214,7 +214,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
 	<script type="text/javascript" src="resources/scripts/jquery.js"></script>
 	<script type="text/javascript" src="resources/scripts/bootstrap/bootstrap.min.js"></script>
-	<script type="text/javascript" src="resources/scripts/jqueryui/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="resources/JqueryUI/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="resources/bbcode/minified/jquery.sceditor.bbcode.min.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js"></script>
 	<script type="text/javascript" src="resources/scripts/admin.js"></script>

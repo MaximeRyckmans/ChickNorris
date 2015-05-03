@@ -6,7 +6,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Chick Norris - Verkoopsgegevens</title>
-	<link rel="stylesheet" type="text/css" href="resources/css/bootstrap/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="resources/css/bootstrap/bootstrap.css"/>
 	<link rel="stylesheet" type="text/css" href="resources/css/header.css"/>
 	<link rel="stylesheet" type="text/css" href="resources/css/footer.css"/>
 	<link rel="stylesheet" type="text/css" href="resources/css/party-form.css"/>
@@ -22,7 +22,7 @@
 </head>
 <body>
 	<div id="header"><%@include file="header.jsp"%></div>
-	<div id="content">
+	<div id="content">		
 		<div id="calendar">
 			<%@include file="calendar.jsp" %>
 		</div>
@@ -120,7 +120,10 @@
 						<li>(*) - verplichte velden</li>
 					</ul>
 				</div>
-  				<button type="submit" class="btn btn-default">Submit</button>
+				<div id="btns">
+					<button type="reset" class="btn btn-danger">Cancel</button>
+  					<button type="submit" class="btn btn-default">Submit</button>
+				</div>				  				
 			</form>
 		</div>
 	</div>

@@ -1,6 +1,6 @@
 $(function(){
 	activateCalendar();
-	// calendar();
+	calendar();
 	bbCode();
 });
 
