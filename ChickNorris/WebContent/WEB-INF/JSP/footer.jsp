@@ -54,18 +54,19 @@
         				<h4 class="modal-title">Email Updates</h4>
       				</div>
       				<div class="modal-body">
-        				<form role="form" action="Home.htm" method="post" >
+        				<form role="form" action="registreerMail.htm" method="post" >
         					<p>Vul gewoon hier jouw emailadres in en mis nooit een lekkere deal bij Chick Norris!</p>
         					<div class="form-group">
     							<label for="form_email">Emailadres:</label>
     							<input type="text" class="form-control" name="form_email" id="form_email" placeholder="Vul je email in.">
   							</div>
-        				</form>
-      				</div>
-      				<div class="modal-footer">
+  							<div class="modal-footer">
         				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         				<button type="button" class="btn btn-primary">Save changes</button>
       				</div>
+        				</form>
+      				</div>
+      				
     			</div><!-- /.modal-content -->
   			</div><!-- /.modal-dialog -->
 		</div><!-- /.modal -->

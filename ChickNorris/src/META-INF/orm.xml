@@ -58,5 +58,8 @@ http://java.sun.com/xml/ns/persistence/orm_2_0.xsd"
 		<query>from User u where u.username = :name</query>
 	</named-query>
 	
-	
+	<!-- Queries voor Subscribers -->
+	<named-query name="selectAllSubscribers">
+		<query>from Subscriber</query>
+	</named-query>
 	</entity-mappings>

@@ -8,6 +8,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import be.chickNorris.models.Subscriber;
+import be.chickNorris.services.SubscriberService;
+
 /**
  * Servlet implementation class CustomerMailServlet
  */
@@ -36,7 +39,17 @@ public class CustomerMailServlet extends HttpServlet {
 	 */
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		try {
+			String email = request.getParameter("form_email");
+
+			SubscriberService subscriberService = new SubscriberService();
+			Subscriber subscriber = new Subscriber();
+			subscriber.setEmail(email);
+			subscriberService.create(subscriber);
+			response.sendRedirect("/ChickNorris/Home.htm");
+		} catch (Exception e) {
+			response.sendRedirect("/ChickNorris/Home.htm");
+		}
 	}
 
 }

@@ -1,12 +1,17 @@
 package be.chickNorris.servlets;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import be.chickNorris.helper.EmailSender;
 
 /**
  * Servlet implementation class MailAdminServlet
@@ -36,7 +41,15 @@ public class MailAdminServlet extends HttpServlet {
 	 */
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("we got here!!!!!!!!!!!!!!!!!!");
+		EmailSender emailSender = new EmailSender();
+		ServletContext context = getServletContext();
+		String checked = request.getParameter("mailAllUsers");
+		System.out.println(checked);
+		if (checked.equals("on")) {
+
+		}
+		List<String> addresses = new ArrayList<String>();
+		// emailSender.sendEmail(context, "maximeryckmans@gmail.com", addresses, subject, templateName, mailBody);
 	}
 
 }

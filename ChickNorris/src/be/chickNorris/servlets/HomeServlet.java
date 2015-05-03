@@ -1,18 +1,13 @@
 package be.chickNorris.servlets;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import be.chickNorris.helper.EmailSender;
 
 /**
  * Servlet implementation class HomeServlet
@@ -38,11 +33,11 @@ public class HomeServlet extends HttpServlet {
 		RequestDispatcher dispatcher = request.getRequestDispatcher(VIEW);
 		dispatcher.forward(request, response);
 
-		ServletContext context = getServletContext();
-		EmailSender emailSender = new EmailSender();
-		List<String> addresses = new ArrayList<String>();
-		addresses.add("maximeryckmans@gmail.com");
-		emailSender.sendEmail(context, "maximeryckmans@gmail.com", addresses, "test", "template.ftl", "testBody");
+		// ServletContext context = getServletContext();
+		// EmailSender emailSender = new EmailSender();
+		// List<String> addresses = new ArrayList<String>();
+		// addresses.add("maximeryckmans@gmail.com");
+		// emailSender.sendEmail(context, "maximeryckmans@gmail.com", addresses, "test", "template.ftl", "testBody");
 	}
 
 	/**
