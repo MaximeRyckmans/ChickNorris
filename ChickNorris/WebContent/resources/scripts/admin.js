@@ -1,7 +1,7 @@
 $(function(){
 	activateCalendar();
-	calendar();
-	tab();
+	// calendar();
+	bbCode();
 });
 
 /**
@@ -9,19 +9,20 @@ $(function(){
  * 						tabs
  * ****************************************************
  */
-function tab() { 
-  //for bootstrap 3 use 'shown.bs.tab' instead of 'shown' in the next line
-  $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-    //save the latest tab; use cookies if you like 'em better:
-    localStorage.setItem('lastTab', $(e.target).attr('id'));
-  });
+$('#tabs a').click(function (e) {
+	e.preventDefault();
+    $(this).tab('show');
+});
 
-  //go to the latest tab, if it exists:
-  var lastTab = localStorage.getItem('lastTab');
-  if (lastTab) {
-      $('#'+lastTab).tab('show');
-  }
-}
+// store the currently selected tab in the hash value
+$("ul.nav-tabs > li > a").on("shown.bs.tab", function (e) {
+	var id = $(e.target).attr("href").substr(1);
+    window.location.hash = id;
+});
+
+// on load of the page: switch to the currently selected tab
+var hash = window.location.hash;
+$('#tabs a[href="' + hash + '"]').tab('show');
 
 /**
  * ****************************************************
@@ -128,5 +129,18 @@ function deleteAllLocations() {
  */
 
 function calendar() {
-    $("#calendarDate").datepicker();
+    $(".calendarDate").datepicker();
 };
+
+/**
+ * ****************************************************
+ * 						BBcode
+ * ****************************************************
+ */
+
+function bbCode() {
+	$("#emailBody").sceditor({
+        plugins: "bbcode",
+	style: "minified/jquery.sceditor.default.min.css"
+    });
+}

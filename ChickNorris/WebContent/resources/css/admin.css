@@ -19,7 +19,7 @@ header {
  	height: auto;
  	width: 200px;
  	height: 200px;
- 	z-index: 10;
+ 	z-index: 1000;
 }
 
 footer {
@@ -93,15 +93,22 @@ hr {
 }
 
 #emailAddress {
-	width: 99%;
+	width: 1105px;
+}
+
+#emailBodyWrapper {
+	width: 1127px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #emailBody {
-	width: 99%;
+	width: 1127px;
+	height: 500px;
 }
 
 #emailTitle {
-	width: 99%;
+	width: 1105px;
 }
 
 #mailBtns {
@@ -125,8 +132,4 @@ hr {
 #img-trashbin {
 	height: 20px;
 	width: 20px;
-}
-
-#logout {
-	float: right;
 }

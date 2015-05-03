@@ -51,12 +51,45 @@
     #home {
     	margin-top: 5px;
     }
+    
+    #emailAddress {
+		width: 99%;
+	}
+	#emailBodyWrapper {
+		width: 99%;
+		margin-left: auto;
+		margin-right: auto;
+	}	
+	#emailTitle {
+		width: 99%;
+	}	
 }
 
 @media (max-width: 1084px) {
 	#media-bar p {
 		font-size: 1.5em;
 	}	
+}
+
+@media (max-width: 980px) {
+	#emailBody {
+		width: 975px;;
+		height: 500px;
+	}
+}
+
+@media (max-width: 800px) {
+	#emailBody {
+		width: 795px;;
+		height: 500px;
+	}
+}
+
+@media (max-width: 768px) {
+	#emailBody {
+		width: 765px;;
+		height: 500px;
+	}
 }
 
 @media (min-width: 768px) and (max-width: 980px) {
@@ -70,21 +103,21 @@
 
 @media (max-width: 619px) {
 	#social-links{
-	width: 60px;
-	margin-left: auto;
-	margin-right: auto;
-}
+		width: 60px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 
-#facebook{
-	background-image: url(../images/facebookRD.png);
-	height: 30px;
-	width: 30px;
-}
-#twitter{
-	background-image: url(../images/twitterRD.png);
-	height: 30px;
-	width: 30px;
-}
+	#facebook{
+		background-image: url(../images/facebookRD.png);
+		height: 30px;
+		width: 30px;
+	}
+	#twitter{
+		background-image: url(../images/twitterRD.png);
+		height: 30px;
+		width: 30px;
+	}
 }
 
 @media (max-width: 460px) {
@@ -98,5 +131,22 @@
 	}
 	
 	#footer a{
+	}
+	#map-canvas {
+		height: 300px;
+	}
+}
+
+@media (max-width: 360px) {
+	#emailBody {
+		width: 360px;
+		height: 300px;
+	}
+}
+
+@media (max-width: 320px) {
+	#emailBody {
+		width: 320px;
+		height: 300px;
 	}
 }

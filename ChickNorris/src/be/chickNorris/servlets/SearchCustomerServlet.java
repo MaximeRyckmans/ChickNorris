@@ -56,7 +56,7 @@ public class SearchCustomerServlet extends HttpServlet {
 
 		// request.setAttribute("currentTab", 2);
 		// request.getRequestDispatcher("/Admin.htm").forward(request, response);
-		response.sendRedirect("/ChickNorris/Admin.htm");
+		response.sendRedirect("/ChickNorris/Admin.htm#search");
 
 		/*
 		 * RequestDispatcher dispatcher = request.getRequestDispatcher("/Admin.htm"); dispatcher.forward(request,
