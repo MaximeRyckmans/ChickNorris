@@ -30,7 +30,7 @@
   				</div>
   				<div class="form-group">
     				<label for="form_firstname">Paswoord:</label>
-    				<input type="text" class="form-control" name="password"  id="form_firstname" placeholder="Vul je paswoord in.">
+    				<input type="password" class="form-control" name="password"  id="form_firstname" placeholder="Vul je paswoord in.">
   				</div>
   				<div id="btns">
   					<a href="Home.htm" class="btn btn-danger">Cancel</a>
