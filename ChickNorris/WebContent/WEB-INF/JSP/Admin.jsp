@@ -35,7 +35,7 @@
     					<li class="active"><a href="#geolocation">Geolocatie</a></li>
         				<li><a href="#search">Zoek klant</a></li>        	
         				<li><a href="#sendMail">Verstuur Email</a></li>
-        				<li><a href="#calendar">Kalender</a></li>
+        				<li><a href="#calendarTab">Kalender</a></li>
     				</ul>
     				<ul class="nav navbar-nav navbar-right">
     					<li><a href="Login.htm">logout</a></li>
@@ -181,7 +181,7 @@
             		</form>
             	</div>
         	</div>
-        	<div id="calendar" class="tab-pane">
+        	<div id="calendarTab" class="tab-pane">
             	<h3>Kalender</h3>
             	<hr/>
             	<div id="calendarPanel" class="container">
