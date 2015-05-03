@@ -6,6 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 	<link rel="stylesheet" type="text/css" href="resources/css/bootstrap/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="resources/css/login.css"/>
 	<link rel="stylesheet" type="text/css" href="resources/css/media-queries.css"/>
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Indie+Flower"/>
 	<!--[if lt IE 9]>
@@ -19,7 +20,7 @@
 <form role="form" action="Login.htm" method="post" >
 	<div id="loginPanel" class="panel panel-default col-xs-12 col-md-3">
 		<div class="panel-heading">
-			Log In
+			<p id="title">Log In</p>
     	</div>
     	<div class="panel">
 			<div class="panel-body">
@@ -31,7 +32,10 @@
     				<label for="form_firstname">Paswoord:</label>
     				<input type="text" class="form-control" name="password"  id="form_firstname" placeholder="Vul je paswoord in.">
   				</div>
-  				<button type="submit" class="btn btn-default">Submit</button>  				
+  				<div id="btns">
+  					<a href="Home.htm" class="btn btn-danger">Cancel</a>
+  					<button type="submit" class="btn btn-default">Submit</button>
+  				</div>				
   				<h1>${error}</h1>							
 			</div>
 		</div>
