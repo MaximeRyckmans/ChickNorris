@@ -16,15 +16,15 @@
 </head>
 <body>
 	<header id="nav-wrapper">
-        <a href="Home.htm"><div id="logo"></div></a>
-        <a href="Login.htm">logout</a>
+        <a href="Home.htm"><div id="logo"></div></a>  
     </header>
-    <div class="content">    	 	
+    <div class="content">    		 	
     	<ul id="tabs" class="nav nav-tabs">
     		<li><a data-toggle="tab" href="#geolocationTab">Geolocatie</a></li>
         	<li><a data-toggle="tab" href="#searchTab">Zoek klant</a></li>        	
         	<li><a data-toggle="tab" href="#sendMailTab">Verstuur Email</a></li>
         	<li><a data-toggle="tab" href="#calendarTab">Kalender</a></li>
+        	<li id="logout"><a href="Login.htm">logout</a></li>
     	</ul>
     	<div id="tabContent" class="tab-content">
         	<div id="searchTab" class="tab-pane fade">
