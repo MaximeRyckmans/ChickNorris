@@ -12,7 +12,7 @@ public class Subscriber {
 	@Id
 	@GeneratedValue
 	private int ID;
-	private String email;
+	private String emailAddress;
 
 	public int getID() {
 		return ID;
@@ -22,12 +22,12 @@ public class Subscriber {
 		ID = iD;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getEmailAddress() {
+		return emailAddress;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setEmailAddress(String emailAddress) {
+		this.emailAddress = emailAddress;
 	}
 
 }
