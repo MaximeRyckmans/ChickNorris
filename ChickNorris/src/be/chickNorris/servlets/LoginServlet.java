@@ -63,7 +63,7 @@ public class LoginServlet extends HttpServlet {
 
 			response.sendRedirect("/ChickNorris/Admin.htm");
 		} else {
-			request.setAttribute("error", "oepsie, niet goed");
+			request.setAttribute("error", "oepsie, niet goed. Probeer het nog eens!");
 			RequestDispatcher dispatcher = request.getRequestDispatcher(VIEW);
 			dispatcher.forward(request, response);
 		}

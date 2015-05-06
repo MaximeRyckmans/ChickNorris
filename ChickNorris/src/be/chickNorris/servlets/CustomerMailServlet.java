@@ -45,7 +45,7 @@ public class CustomerMailServlet extends HttpServlet {
 			SubscriberService subscriberService = new SubscriberService();
 
 			if (email.equals(subscriberService.getSubscribersByEmailAddress(email).getEmailAddress())) {
-				System.out.println("error message here stating email already in database");
+
 				response.sendRedirect("/ChickNorris/Home.htm");
 			} else {
 				Subscriber subscriber = new Subscriber();

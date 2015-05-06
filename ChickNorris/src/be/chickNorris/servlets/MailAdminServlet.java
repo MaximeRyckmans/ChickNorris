@@ -61,7 +61,7 @@ public class MailAdminServlet extends HttpServlet {
 			}
 		} else {
 
-			String delims = "[,]";
+			String delims = "[;]";
 			String[] tokens = emailAddress.split(delims);
 			for (int i = 0; i < tokens.length; i++) {
 				addresses.add(tokens[i]);
