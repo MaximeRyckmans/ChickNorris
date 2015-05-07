@@ -15,18 +15,18 @@
 		</tr>
 		<tr>
 			<td id="bodyText" align="center" style="background-color: #dbd1c2;">
-				Nieuw order: </br>
-				Voornaam: ${customer.name} </br>
-				Naam: ${customer.surName} </br>
-				Bedrijf: ${customer.companyName} </br>
-				Adres: ${customer.address} </br>
-				BTW-nr: ${customer.VATNumber} </br>
-				Tel-nr: ${customer.telNR} </br>
-				Email: ${customer.email} </br>
-				Gelegenheid: ${order.occasion} </br>
-				Datum: ${date} </br>
-				Aanvangsuur evenement: ${order.eventTime?time} </br>
-				Formule: ${order.formula}
+				Nieuw order: <br/>
+				Voornaam: ${customer.name} <br/>
+				Naam: ${customer.surName} <br/>
+				Bedrijf: ${customer.companyName} <br/>
+				Adres: ${customer.address} <br/>
+				BTW-nr: ${customer.VATNumber} <br/>
+				Tel-nr: ${customer.telNR} <br/>
+				Email: ${customer.email} <br/>
+				Gelegenheid: ${order.occasion} <br/>
+				Datum: ${date} <br/>
+				Aanvangsuur evenement: ${order.eventTime?time} <br/>
+				Formule: ${order.formula}<br/>
 		
 				
 			</td>
