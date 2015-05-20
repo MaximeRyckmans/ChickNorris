@@ -19,8 +19,8 @@
 		<div class="title-page">
 			<h2>Welkom bij Chick Norris “Kip Aan ’t Spit”</h2>
 		</div>
-		<div class="col-xs-3"></div>
-		<div class="text-center col-xs-6">
+		<div class="col-xs-0 col-md-3"></div>
+		<div class="text-center col-xs-12 col-md-6">
 			<p id="first-paragraph"> 
 				Chick Norris “Kip Aan ’t Spit”, actief sinds 2014, bestaat uit een jong en dynamisch team, met foodtrucks verspreid over het ganse land.
 				Hierdoor is onze Chick Norris Foodtruck steeds bij u in de buurt.

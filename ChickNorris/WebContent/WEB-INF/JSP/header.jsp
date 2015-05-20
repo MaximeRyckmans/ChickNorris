@@ -43,7 +43,7 @@
                 	<a href="#connect" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Connect<span class="caret"></span></a>
               		<ul class="dropdown-menu" role="menu">
               			<li><a href="#contact">Contact CN</a></li>
-              			<li><a href="#connect-order">Bestel Online</a></li>
+              			<li><a href="Party-Form.htm">Bestel Online</a></li>
               			<li class="divider"></li>
               			<li class="dropdown-header">Social Media</li>
               			<li><a href="https://www.facebook.com/heerlijkekip?pnref=lhc" target="_blank">Facebook</a></li>

@@ -20,9 +20,9 @@
   		<li class="col-xs-12 col-md-2">
   			<a id="lnk_my" href="#mnu_my" data-toggle="collapse" data-parent="#footer-menu"><h4>My CN</h3></a>
 			<ul class="mnu collapse in" id="mnu_my">
-				<li><a href="#">CN On Tour</a></li>
+				<li><a href="Localize.htm">CN On Tour</a></li>
       			<li><a href="PrivateParty.htm">CN Private Party</a></li>
-      			<li><a href="#">CN Corporate Events</a></li>
+      			<li><a href="BusinessParty.htm">CN Corporate Events</a></li>
       			<!-- <li><a href="#">CN Event Sponsoring</a></li> -->
 			</ul>
   		</li>

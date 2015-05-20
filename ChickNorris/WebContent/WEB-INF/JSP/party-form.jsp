@@ -23,10 +23,10 @@
 <body>
 	<div id="header"><%@include file="header.jsp"%></div>
 	<div id="content">		
-		<div id="calendar">
+		<div id="calendar" class="col-xs-12 col-md-6">
 			<%@include file="calendar.jsp" %>
 		</div>
-		<div id="form">
+		<div id="form" class="col-xs-12 col-md-6">
 			<form role="form" action="Party-Form.htm" method="post" >
 				<div class="form-group">
     				<label for="form_name">Naam (*) :</label>

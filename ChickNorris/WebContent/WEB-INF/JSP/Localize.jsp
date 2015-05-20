@@ -23,7 +23,7 @@
 <body>
 	<div id="header"><%@include file='header.jsp'%></div>
 	<div id="content">
-		<div id="map-canvas" class="col-md-6" style="height: 500px;"></div>
+		<div id="map-canvas" class="col-md-6"></div>
 		<div id="map-addresses" class="col-md-6">
 			<c:if test="${not empty listLocations}">
      			<c:forEach var="ob" varStatus="status" items="${listLocations}">
