@@ -35,7 +35,7 @@
                   <a href="#catering" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">CN Catering <span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
                     <li><a href="PrivateParty.htm">CN Prive Party</a></li>
-                    <li><a href="#bussiness">CN Bussiness Party</a></li>
+                    <li><a href="BusinessParty.htm">CN Bussiness Events</a></li>
                   </ul>
                 </li>                
                 <!-- <li><a href="#sponsoring">CN Event Sponsoring</a></li> -->

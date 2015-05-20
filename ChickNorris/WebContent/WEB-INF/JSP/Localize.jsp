@@ -29,9 +29,9 @@
      			<c:forEach var="ob" varStatus="status" items="${listLocations}">
     				<div class="panel panel-default col-md-6">
 						<div class="panel-heading">
-        					<a class="panel-title" data-toggle="collapse" data-target="#collapseOne">${ob.region}</a>
+        					<a class="panel-title" data-toggle="collapse" data-target="#${ob.ID}">${ob.region}</a>
     					</div>
-    					<div id="collapseOne" class="panel-collapse collapse">
+    					<div id="${ob.ID}" class="panel-collapse collapse">
 							<div class="panel-body">
 								<ul>
 									<li>${ob.locAddress}</li>

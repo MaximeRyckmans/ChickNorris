@@ -14,7 +14,7 @@
     		<ul class="mnu collapse in" id="mnu_info">
     			<li><a href="About.htm">About CN</a></li>
     			<li><a href="#">CN Nieuws</a></li>
-    			<li><a href="#">CN Legal</a></li>
+    			<li><a href="Legal.htm">CN Legal</a></li>
     		</ul>    				
   		</li>
   		<li class="col-xs-12 col-md-2">
@@ -61,8 +61,8 @@
     							<input type="text" class="form-control" name="form_email" id="form_email" placeholder="Vul je email in.">
   							</div>
   							<div class="modal-footer">
-        				<button type="reset" class="btn btn-default" data-dismiss="modal">Close</button>
-        				<button type="submit" class="btn btn-primary">Save changes</button>
+        				<button type="reset" class="btn btn-default" data-dismiss="modal">Annuleer</button>
+        				<button type="submit" class="btn btn-primary">Schrijf je in!</button>
       				</div>
         				</form>
       				</div>
