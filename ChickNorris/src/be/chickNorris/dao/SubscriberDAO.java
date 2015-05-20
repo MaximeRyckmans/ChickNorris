@@ -34,4 +34,10 @@ public class SubscriberDAO extends AbstractDAO {
 		return query.getResultList();
 	}
 
+	public Subscriber getSubscribersByEmailAddress(String email) {
+		TypedQuery<Subscriber> query = getEntityManager().createNamedQuery("getSubscribersByEmailAddress", Subscriber.class);
+		query.setParameter("email", email);
+		return query.getSingleResult();
+	}
+
 }

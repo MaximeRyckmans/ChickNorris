@@ -62,4 +62,8 @@ http://java.sun.com/xml/ns/persistence/orm_2_0.xsd"
 	<named-query name="selectAllSubscribers">
 		<query>from Subscriber</query>
 	</named-query>
+	
+	<named-query name="getSubscribersByEmailAddress">
+		<query>from Subscriber s where s.emailAddress = :email</query>
+	</named-query>
 	</entity-mappings>

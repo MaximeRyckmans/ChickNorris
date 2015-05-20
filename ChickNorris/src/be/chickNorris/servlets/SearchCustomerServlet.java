@@ -43,19 +43,13 @@ public class SearchCustomerServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String name = request.getParameter("form_name");
 		String surName = request.getParameter("form_surName");
-		/*
-		 * CustomerService customerService = new CustomerService(); List<Customer> listCust =
-		 * customerService.getCustomersByNameOrSurname(name, surName);
-		 */
+
 		OrderService orderService = new OrderService();
 		List<Order> listCust = orderService.selectOrdersByNameAndSurname(name, surName);
 
 		HttpSession session = request.getSession(true);
 		session.setAttribute("listCust", listCust);
-		// request.setAttribute("listCust", listCust);
 
-		// request.setAttribute("currentTab", 2);
-		// request.getRequestDispatcher("/Admin.htm").forward(request, response);
 		response.sendRedirect("/ChickNorris/Admin.htm#search");
 
 		/*

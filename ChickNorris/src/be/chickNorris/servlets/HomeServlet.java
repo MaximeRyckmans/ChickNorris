@@ -32,12 +32,6 @@ public class HomeServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		RequestDispatcher dispatcher = request.getRequestDispatcher(VIEW);
 		dispatcher.forward(request, response);
-
-		// ServletContext context = getServletContext();
-		// EmailSender emailSender = new EmailSender();
-		// List<String> addresses = new ArrayList<String>();
-		// addresses.add("maximeryckmans@gmail.com");
-		// emailSender.sendEmail(context, "maximeryckmans@gmail.com", addresses, "test", "template.ftl", "testBody");
 	}
 
 	/**

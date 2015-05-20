@@ -40,7 +40,6 @@ public class TruckLocationServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String locationId = request.getParameter("locationId");
 
-		System.out.println(locationId + "<------------------------------------------------------------------");
 		LocationService locationService = new LocationService();
 		if (!locationId.equals(null)) {
 			int ID = Integer.parseInt(locationId);

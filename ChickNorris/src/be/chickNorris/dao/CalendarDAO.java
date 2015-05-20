@@ -27,7 +27,6 @@ public class CalendarDAO extends AbstractDAO {
 	/**
 	 * Returns a list of Customer objects.
 	 *
-	 * @param projectCode
 	 * @return
 	 */
 	public List<Calendar> getAllCalendars() {
@@ -39,7 +38,6 @@ public class CalendarDAO extends AbstractDAO {
 	public List<Calendar> selectAllReservedCalendars(boolean isReserved) {
 		TypedQuery<Calendar> query = getEntityManager().createNamedQuery("selectAllReservedCalendars", Calendar.class);
 		Boolean b = new Boolean(isReserved);
-		String bool = b.toString();
 
 		query.setParameter("isReserved", b);
 		return query.getResultList();

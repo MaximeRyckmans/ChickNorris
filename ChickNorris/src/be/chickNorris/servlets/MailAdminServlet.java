@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import be.chickNorris.helper.EmailSender;
+import be.chickNorris.models.Subscriber;
+import be.chickNorris.services.SubscriberService;
 
 /**
  * Servlet implementation class MailAdminServlet
@@ -43,13 +45,31 @@ public class MailAdminServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		EmailSender emailSender = new EmailSender();
 		ServletContext context = getServletContext();
-		String checked = request.getParameter("mailAllUsers");
+		String checked = null;
+		checked = request.getParameter("mailAllUsers");
+		String title = request.getParameter("emailTitle");
+		String body = request.getParameter("emailBody");
+		String emailAddress = request.getParameter("emailAddress");
 		System.out.println(checked);
-		if (checked.equals("on")) {
-
-		}
 		List<String> addresses = new ArrayList<String>();
-		// emailSender.sendEmail(context, "maximeryckmans@gmail.com", addresses, subject, templateName, mailBody);
+		if (checked != null) {
+			SubscriberService subscriberService = new SubscriberService();
+			List<Subscriber> subscribers = new ArrayList<Subscriber>();
+			subscribers = subscriberService.getAllSubscribers();
+			for (Subscriber s : subscribers) {
+				addresses.add(s.getEmailAddress());
+			}
+		} else {
+
+			String delims = "[;]";
+			String[] tokens = emailAddress.split(delims);
+			for (int i = 0; i < tokens.length; i++) {
+				addresses.add(tokens[i]);
+			}
+		}
+
+		emailSender.sendEmail(context, "maximeryckmans@gmail.com", addresses, title, "template.ftl", body);
+		response.sendRedirect("/ChickNorris/Admin.htm#sendMail");
 	}
 
 }

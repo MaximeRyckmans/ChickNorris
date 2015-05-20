@@ -3,16 +3,19 @@ package be.chickNorris.servlets;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import be.chickNorris.helper.EmailSender;
 import be.chickNorris.models.Address;
 import be.chickNorris.models.Calendar;
 import be.chickNorris.models.Customer;
@@ -46,9 +49,7 @@ public class PartyFormServlet extends HttpServlet {
 		CalendarService calendarService = new CalendarService();
 		List<Calendar> calendarList = calendarService.selectAllReservedCalendars(true);
 		List<String> dateList = calendarService.returnDates(calendarList);
-		// response.setContentType("application/json");
-		// response.setCharacterEncoding("UTF-8");
-		// response.getWriter().write(new Gson().toJson(dateList));
+
 		request.setAttribute("dateList", dateList);
 		RequestDispatcher dispatcher = request.getRequestDispatcher(VIEW);
 		dispatcher.forward(request, response);
@@ -75,10 +76,11 @@ public class PartyFormServlet extends HttpServlet {
 		String occasion = request.getParameter("form_occasion");
 		String eventDateString = request.getParameter("form_date");
 
-		SimpleDateFormat dateFormat = new SimpleDateFormat("mm/dd/yyyy");
+		SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 		Date eventDate = new Date();
 		try {
 			eventDate = dateFormat.parse(eventDateString);
+			System.out.println(eventDate + " <-------------");
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -124,6 +126,14 @@ public class PartyFormServlet extends HttpServlet {
 
 			OrderService orderService = new OrderService();
 			orderService.create(order);
+			EmailSender emailSender = new EmailSender();
+			String sender = "maximeryckmans@gmail.com";
+			List<String> addresses = new ArrayList<String>();
+			addresses.add(customer.getEmail());
+			addresses.add("maximeryckmans@gmail.com");
+			ServletContext context = getServletContext();
+			String subject = "Nieuw order";
+			emailSender.sendOrderEmail(context, sender, addresses, subject, "order.ftl", customer, order, eventDateString);
 			response.sendRedirect("/ChickNorris//Party-Form.htm");
 		} catch (Exception ex) {
 			ex.printStackTrace();

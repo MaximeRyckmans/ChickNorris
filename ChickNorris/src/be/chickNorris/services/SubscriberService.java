@@ -28,4 +28,8 @@ public class SubscriberService {
 	public List<Subscriber> getAllSubscribers() {
 		return subscriberDAO.getAllSubscribers();
 	}
+
+	public Subscriber getSubscribersByEmailAddress(String email) {
+		return subscriberDAO.getSubscribersByEmailAddress(email);
+	}
 }
