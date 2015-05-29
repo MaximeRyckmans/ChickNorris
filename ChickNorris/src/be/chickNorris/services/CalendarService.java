@@ -51,7 +51,7 @@ public class CalendarService {
 			List<LocalDate> totalDates = new ArrayList<>();
 			while (!start.isAfter(end)) {
 				totalDates.add(start);
-				System.out.println(" " + start);
+
 				start = start.plusDays(1);
 			}
 			for (LocalDate l : totalDates) {

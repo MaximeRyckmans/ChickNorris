@@ -50,7 +50,6 @@ public class MailAdminServlet extends HttpServlet {
 		String title = request.getParameter("emailTitle");
 		String body = request.getParameter("emailBody");
 		String emailAddress = request.getParameter("emailAddress");
-		System.out.println(checked);
 		List<String> addresses = new ArrayList<String>();
 		if (checked != null) {
 			SubscriberService subscriberService = new SubscriberService();
