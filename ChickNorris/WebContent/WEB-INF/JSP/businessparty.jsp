@@ -34,7 +34,7 @@
         			<a class="panel-title" data-toggle="collapse" data-target="#collapseOne">Formula 1: CN Basic</a>
     			</div>
     			<div id="collapseOne" class="panel-collapse collapse in">
-					<div class="panel-body">
+					<div class="panel-body CNtext">
 						<ul>
 							<li>Volwassenen: Krielaardappelen met een halve kip en Appelmoes.</li>
 							<li>Kids: Frietjes, kippenworst, appelmoes en gemengde salade.</li>
@@ -51,7 +51,7 @@
         			<a class="panel-title" data-toggle="collapse" data-target="#collapseTwo">Formula 2: CN Regular</a>
     			</div>
     			<div id="collapseTwo" class="panel-collapse collapse in">
-					<div class="panel-body">
+					<div class="panel-body CNtext">
 						<ul>
 							<li>Volwassenen: Krielaardappelen met een halve kip, appelmoes, gemengd slaatje.</li>
 							<li>Kids: Frietjes, Kippenworst, appelmoes en gemengde salade.</li>
@@ -68,7 +68,7 @@
         			<a class="panel-title" data-toggle="collapse" data-target="#collapseThree">Formula 3: CN Deluxe</a>
     			</div>
     			<div id="collapseThree" class="panel-collapse collapse in">
-					<div class="panel-body">
+					<div class="panel-body CNtext">
 						<ul>
 							<li>Volwassenen: Krielaardappelen met een halve kip, appelmoes, gemengd slaatje.</li>
 							<li>Kids: Frietjes, Kippenworst,appelmoes en gemengde salade.</li>
@@ -86,9 +86,9 @@
        				<a class="panel-title" data-toggle="collapse" data-target="#collapseFour">Formula 4: CN VIP</a>
    				</div>
    				<div id="collapseFour" class="panel-collapse collapse in">
-					<div class="panel-body">
+					<div class="panel-body CNtext">
 						<ul>
-							<li>Volwassenen: Krielaardappelen, kip, appelmoes en gemengde salade Ã  volontÃ©</li>
+							<li>Volwassenen: Krielaardappelen, kip, appelmoes en gemengde salade à volonté</li>
 							<li>Kids: Frietjes, Kippenworst, Appelmoes en gemengde salade.</li>
 							<li>Bestek en porseleinen borden worden aangeleverd en vuil meegenomen.</li>
 							<li>Wagen blijft 4 hr ter plaatse.</li>
@@ -100,7 +100,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="formula-extrainfo">
+		<div id="formula-extrainfo" class="col-xs-12">
 			<p>Hebt u zelf een idee of wenst u een gepersonaliseerd menu, contacteer ons dan via onderstaand telefoonnummer:</p>
 			<span id="phone">0484/03.63.75</span>
 			<p id="fix-costs">Forfaitaire kosten bij een event met minder dan 100 aanwezigen: 250 EUR (**)</p>

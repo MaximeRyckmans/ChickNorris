@@ -2,7 +2,7 @@
 
 <html>
 	<header class="container-fluid utility-header">
-    	<div class="content">
+    	<div class="content CNtext">
         	<nav>
             	<ul>
                 	<!-- <li><a href="About.htm">About CN</a></li> -->

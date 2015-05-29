@@ -34,7 +34,7 @@
     					<div id="${ob.ID}" class="panel-collapse collapse">
 							<div class="panel-body">
 								<ul>
-									<li>${ob.locAddress}</li>
+									<li class="CNtext">${ob.locAddress}</li>
 								</ul>						
 							</div>
 						</div>
