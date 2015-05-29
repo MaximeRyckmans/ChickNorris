@@ -57,7 +57,7 @@ public class EmailSender {
 
 			@Override
 			protected PasswordAuthentication getPasswordAuthentication() {
-				return new PasswordAuthentication("maximeryckmans@gmail.com", "xxxxxx");
+				return new PasswordAuthentication("cn@chicknorris.be", "fZMB'p^x^t7NE,CT");
 			}
 		});
 
@@ -163,7 +163,7 @@ public class EmailSender {
 
 			@Override
 			protected PasswordAuthentication getPasswordAuthentication() {
-				return new PasswordAuthentication("maximeryckmans@gmail.com", "xxxxxx");
+				return new PasswordAuthentication("cn@chicknorris.be", "fZMB'p^x^t7NE,CT");
 			}
 		});
 

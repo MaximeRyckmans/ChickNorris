@@ -68,7 +68,7 @@ public class MailAdminServlet extends HttpServlet {
 			}
 		}
 
-		emailSender.sendEmail(context, "maximeryckmans@gmail.com", addresses, title, "template.ftl", body);
+		emailSender.sendEmail(context, "cn@chicknorris.be", addresses, title, "template.ftl", body);
 		response.sendRedirect("/ChickNorris/Admin.htm#sendMail");
 	}
 

@@ -80,7 +80,6 @@ public class PartyFormServlet extends HttpServlet {
 		Date eventDate = new Date();
 		try {
 			eventDate = dateFormat.parse(eventDateString);
-			System.out.println(eventDate + " <-------------");
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -127,10 +126,10 @@ public class PartyFormServlet extends HttpServlet {
 			OrderService orderService = new OrderService();
 			orderService.create(order);
 			EmailSender emailSender = new EmailSender();
-			String sender = "maximeryckmans@gmail.com";
+			String sender = "cn@chicknorris.be";
 			List<String> addresses = new ArrayList<String>();
 			addresses.add(customer.getEmail());
-			addresses.add("maximeryckmans@gmail.com");
+			addresses.add(sender);
 			ServletContext context = getServletContext();
 			String subject = "Nieuw order";
 			emailSender.sendOrderEmail(context, sender, addresses, subject, "order.ftl", customer, order, eventDateString);
