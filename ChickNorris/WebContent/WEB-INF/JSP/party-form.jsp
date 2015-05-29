@@ -105,19 +105,19 @@
   						</label>
 					</div>
 				</div>
-  				<div class="checkbox">
+  				<div class="checkbox CNtext">
     				<label>
-      					<input type="checkbox"> Hierbij bevestig ik mijn bestelling en ga ik akkoord met de <a href="#">algemene voorwaarden.</a>
+      					<input type="checkbox"> Hierbij bevestig ik mijn bestelling en ga ik akkoord met de <a href="Legal.htm">algemene voorwaarden.</a>
     				</label>
   				</div>
-  				<div class="checkbox">
+  				<div class="checkbox CNtext">
   					<label>
   						<input type="checkbox">Mijn bestelling wordt pas definitief na bevestiging van uw reservatie.
   					</label>
   				</div>
   				<div id="fine-print">
 					<ul>
-						<li>(*) - verplichte velden</li>
+						<li class="CNtext">(*) - verplichte velden</li>
 					</ul>
 				</div>
 				<div id="btns">

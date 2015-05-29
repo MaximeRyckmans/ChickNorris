@@ -35,10 +35,10 @@
   		<li class="col-xs-12 col-md-2">
   			<a id="lnk_connect" href="#mnu_connect" data-toggle="collapse" data-parent="#footer-menu"><h4>CN Connect</h3></a>
     		<ul class="mnu collapse in" id="mnu_connect">
-      			<li><a href="#">Contact CN</a></li>
-      			<!-- <li><a href="#">Bestel Online</a></li> -->
+      			<!-- <li><a href="#">Contact CN</a></li> -->
+      			<li><a href="#Party-Form.htm">Bestel Online</a></li>
       			<li><a target="_blank" href="https://www.facebook.com/heerlijkekip?pnref=lhc">Facebook</a></li>
-      			<li><a target="_blank" href="#">Twitter</a></li>
+      			<!-- <li><a target="_blank" href="#">Twitter</a></li> -->
       			<li><a href="#Email" data-toggle="modal" data-target="#subscribeModal">CN mail subscription</a></li>
     		</ul>
   		</li>
