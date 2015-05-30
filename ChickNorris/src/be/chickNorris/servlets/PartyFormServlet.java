@@ -135,7 +135,7 @@ public class PartyFormServlet extends HttpServlet {
 			String subject = "Nieuw order";
 			emailSender.sendOrderEmail(context, sender, password, addresses, subject, "order.ftl", customer, order,
 					eventDateString);
-			response.sendRedirect("/ChickNorris//Party-Form.htm");
+			response.sendRedirect("/Party-Form.htm");
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}

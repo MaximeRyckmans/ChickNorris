@@ -48,6 +48,6 @@ public class TruckLocationServlet extends HttpServlet {
 			locationService.deleteAllLocations();
 		}
 
-		response.sendRedirect("/ChickNorris/Admin.htm");
+		response.sendRedirect("/Admin.htm");
 	}
 }

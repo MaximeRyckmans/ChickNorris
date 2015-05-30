@@ -46,12 +46,12 @@ public class CustomerMailServlet extends HttpServlet {
 
 			if (email.equals(subscriberService.getSubscribersByEmailAddress(email).getEmailAddress())) {
 
-				response.sendRedirect("/ChickNorris/Home.htm");
+				response.sendRedirect("/Home.htm");
 			} else {
 				Subscriber subscriber = new Subscriber();
 				subscriber.setEmailAddress(email);
 				subscriberService.create(subscriber);
-				response.sendRedirect("/ChickNorris/Home.htm");
+				response.sendRedirect("/Home.htm");
 			}
 		} catch (Exception e) {
 			response.sendRedirect("/ChickNorris/Home.htm");

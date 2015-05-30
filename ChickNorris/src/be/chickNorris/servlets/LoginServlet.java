@@ -61,7 +61,7 @@ public class LoginServlet extends HttpServlet {
 			HttpSession session = request.getSession(false);
 			session.setAttribute("loggedIn", true);
 
-			response.sendRedirect("/ChickNorris/Admin.htm");
+			response.sendRedirect("/Admin.htm");
 		} else {
 			request.setAttribute("error", "oepsie, niet goed. Probeer het nog eens!");
 			RequestDispatcher dispatcher = request.getRequestDispatcher(VIEW);

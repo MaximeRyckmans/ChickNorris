@@ -70,7 +70,7 @@ public class MailAdminServlet extends HttpServlet {
 		}
 
 		emailSender.sendEmail(context, sender, password, addresses, title, "template.ftl", body);
-		response.sendRedirect("/ChickNorris/Admin.htm#sendMail");
+		response.sendRedirect("/Admin.htm#sendMail");
 	}
 
 }

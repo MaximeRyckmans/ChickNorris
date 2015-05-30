@@ -57,7 +57,7 @@ public class GeoLocationServlet extends HttpServlet {
 		LocationService locationService = new LocationService();
 		locationService.create(location);
 
-		response.sendRedirect("/ChickNorris/Admin.htm");
+		response.sendRedirect("/Admin.htm");
 
 	}
 

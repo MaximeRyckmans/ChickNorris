@@ -41,7 +41,7 @@ public class AdminServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 
 		if (session.getAttribute("loggedIn") == null) {
-			response.sendRedirect("/ChickNorris/Login.htm");
+			response.sendRedirect("/Login.htm");
 		} else {
 			LocationService locationService = new LocationService();
 			CalendarService calendarService = new CalendarService();

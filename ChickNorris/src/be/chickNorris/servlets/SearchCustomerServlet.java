@@ -50,7 +50,7 @@ public class SearchCustomerServlet extends HttpServlet {
 		HttpSession session = request.getSession(true);
 		session.setAttribute("listCust", listCust);
 
-		response.sendRedirect("/ChickNorris/Admin.htm#search");
+		response.sendRedirect("/Admin.htm#search");
 
 		/*
 		 * RequestDispatcher dispatcher = request.getRequestDispatcher("/Admin.htm"); dispatcher.forward(request,
