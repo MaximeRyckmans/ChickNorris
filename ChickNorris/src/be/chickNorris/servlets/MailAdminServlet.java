@@ -46,6 +46,8 @@ public class MailAdminServlet extends HttpServlet {
 		EmailSender emailSender = new EmailSender();
 		ServletContext context = getServletContext();
 		String checked = null;
+		String sender = request.getParameter("senderAddress");
+		String password = request.getParameter("passwordSender");
 		checked = request.getParameter("mailAllUsers");
 		String title = request.getParameter("emailTitle");
 		String body = request.getParameter("emailBody");
@@ -67,7 +69,7 @@ public class MailAdminServlet extends HttpServlet {
 			}
 		}
 
-		emailSender.sendEmail(context, "cn@chicknorris.be", addresses, title, "template.ftl", body);
+		emailSender.sendEmail(context, sender, password, addresses, title, "template.ftl", body);
 		response.sendRedirect("/ChickNorris/Admin.htm#sendMail");
 	}
 

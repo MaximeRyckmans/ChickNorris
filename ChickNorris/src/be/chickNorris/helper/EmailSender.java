@@ -35,8 +35,8 @@ import freemarker.template.TemplateException;
 
 public class EmailSender {
 
-	public void sendEmail(ServletContext context, String sender, List<String> addresses, String subject, String templateName,
-			String mailBody) {
+	public void sendEmail(ServletContext context, String sender, String password, List<String> addresses, String subject,
+			String templateName, String mailBody) {
 
 		String logo = context.getRealPath("/resources/images/logo.png");
 		String fb = context.getRealPath("/resources/images/facebook.png");
@@ -57,7 +57,7 @@ public class EmailSender {
 
 			@Override
 			protected PasswordAuthentication getPasswordAuthentication() {
-				return new PasswordAuthentication("cn@chicknorris.be", "fZMB'p^x^t7NE,CT");
+				return new PasswordAuthentication(sender, password);
 			}
 		});
 
@@ -141,7 +141,7 @@ public class EmailSender {
 
 	}
 
-	public void sendOrderEmail(ServletContext context, String sender, List<String> addresses, String subject,
+	public void sendOrderEmail(ServletContext context, String sender, String password, List<String> addresses, String subject,
 			String templateName, Customer customer, Order order, String eventDate) {
 
 		String logo = context.getRealPath("/resources/images/logo.png");
@@ -163,7 +163,7 @@ public class EmailSender {
 
 			@Override
 			protected PasswordAuthentication getPasswordAuthentication() {
-				return new PasswordAuthentication("cn@chicknorris.be", "fZMB'p^x^t7NE,CT");
+				return new PasswordAuthentication(sender, password);
 			}
 		});
 

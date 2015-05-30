@@ -27,7 +27,7 @@
 			<%@include file="calendar.jsp" %>
 		</div>
 		<div id="form" class="col-xs-12 col-md-6">
-			<form role="form" action="Party-Form.htm" method="post" >
+			<form role="form" id="form-validate" action="Party-Form.htm" method="post" >
 				<div class="form-group">
     				<label for="form_name">Naam (*) :</label>
     				<input type="text" class="form-control" name="form_name" id="form_name" placeholder="Vul je naam in.">
@@ -62,7 +62,7 @@
   				</div>
   				<div class="form-group">
     				<label for="form_email">Email(*):</label>
-    				<input type="text" class="form-control" name="form_email" id="form_email" placeholder="Vul je emailadres in.">
+    				<input type="email" class="form-control" name="form_email" id="form_email" placeholder="Vul je emailadres in.">
   				</div>
   				<div class="form-group">
     				<label for="form_occasion">Gelegenheid (*):</label>
@@ -107,12 +107,12 @@
 				</div>
   				<div class="checkbox CNtext">
     				<label>
-      					<input type="checkbox"> Hierbij bevestig ik mijn bestelling en ga ik akkoord met de <a href="Legal.htm">algemene voorwaarden.</a>
+      					<input name="form_confirm" id="form_confirm" type="checkbox"> Hierbij bevestig ik mijn bestelling en ga ik akkoord met de <a href="Legal.htm">algemene voorwaarden.</a>
     				</label>
   				</div>
   				<div class="checkbox CNtext">
   					<label>
-  						<input type="checkbox">Mijn bestelling wordt pas definitief na bevestiging van uw reservatie.
+  						<input name="form_info" id="form_info" type="checkbox">Mijn bestelling wordt pas definitief na bevestiging van uw reservatie.
   					</label>
   				</div>
   				<div id="fine-print">
@@ -131,11 +131,15 @@
 	<!-- JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-	<script type="text/javascript" src="resources/scripts/jquery.js"></script>	
+	<script type="text/javascript" src="resources/scripts/jquery.js"></script>
+	<script type="text/javascript" src="resources/JqueryUI/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="resources/scripts/bootstrap/bootstrap.min.js"></script>
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/additional-methods.min.js"></script>
+	<script type="text/javascript" src="resources/scripts/localization/messages_nl.js"></script>
 	<script type="text/javascript" src="resources/scripts/template.js"></script>
 	<script type="text/javascript" src="resources/scripts/party-form.js"></script>
-	<script type="text/javascript" src="resources/scripts/calendar.js"></script>
+	<script type="text/javascript" src="resources/scripts/calendar.js"></script>	
 	<script type="text/javascript" src="resources/scripts/bootstrap/docs.min.js"></script>
 	<script type="text/javascript" src="resources/scripts/bootstrap/ie10-viewport-bug-workaround.js"></script>
 </body>

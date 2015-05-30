@@ -4,8 +4,8 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
 	<persistence-unit name="ChickNorris">
 		<properties>
-			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
-			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/chicknor_chicken" />
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />			
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/chicknor_chicken"/>
 			<property name="javax.persistence.jdbc.user" value="chicknor_CN" />
 			<property name="javax.persistence.jdbc.password" value="4}kKu#+hP9G6" />
 			<property name="hibernate.show_sql" value="false" />

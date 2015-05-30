@@ -140,7 +140,15 @@ function calendar() {
 
 function bbCode() {
 	$("#emailBody").sceditor({
-        plugins: "bbcode",
+        plugins: "xhtml",
 	style: "minified/jquery.sceditor.default.min.css"
     });
 }
+
+/**
+ * ****************************************************
+ * 						Validation
+ * ****************************************************
+ */
+
+$("#form-validate").validate();

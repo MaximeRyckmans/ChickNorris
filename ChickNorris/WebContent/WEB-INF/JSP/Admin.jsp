@@ -160,8 +160,16 @@
             	<h3>Verstuur mail</h3>
             	<hr/>
             	<div id="mailPanel">
-            		<form role="form" action="Mail.htm" method="post" >
+            		<form role="form" id="form-validate" action="Mail.htm" method="post" >
             			<div id="emailBodyWrapper">
+            				<div class="form-group">
+            					<label for="senderAddress">Van:</label>
+            					<input id="senderAddress" name="senderAddress" type="email" placeholder="Geef een @chicknorris.be email in.">            					
+            				</div>
+            				<div clas="form-group">
+            					<label for="passwordSender">Paswoord:</label>
+            					<input id="passwordSender" name="passwordSender" type="password" placeholder="******">
+            				</div>
             				<div class="form-group">
             					<label for="emailAddress">Naar:</label>
             					<input id="emailAddress" name="emailAddress" type="textbox" placeholder="Emailadressen waar u de mail naartoe wilt versturen. Ex: ChickNorris@ChickNorris.be"><br/>         				
@@ -217,6 +225,9 @@
 	<script type="text/javascript" src="resources/JqueryUI/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="resources/bbcode/minified/jquery.sceditor.bbcode.min.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js"></script>
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/additional-methods.min.js"></script>
+	<script type="text/javascript" src="resources/scripts/localization/messages_nl.js"></script>
 	<script type="text/javascript" src="resources/scripts/admin.js"></script>
 	<script type="text/javascript" src="resources/scripts/calendar.js"></script>
 	<script type="text/javascript" src="resources/scripts/bootstrap/docs.min.js"></script>

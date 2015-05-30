@@ -127,12 +127,14 @@ public class PartyFormServlet extends HttpServlet {
 			orderService.create(order);
 			EmailSender emailSender = new EmailSender();
 			String sender = "cn@chicknorris.be";
+			String password = "fZMB'p^x^t7NE,CT";
 			List<String> addresses = new ArrayList<String>();
 			addresses.add(customer.getEmail());
 			addresses.add(sender);
 			ServletContext context = getServletContext();
 			String subject = "Nieuw order";
-			emailSender.sendOrderEmail(context, sender, addresses, subject, "order.ftl", customer, order, eventDateString);
+			emailSender.sendOrderEmail(context, sender, password, addresses, subject, "order.ftl", customer, order,
+					eventDateString);
 			response.sendRedirect("/ChickNorris//Party-Form.htm");
 		} catch (Exception ex) {
 			ex.printStackTrace();
