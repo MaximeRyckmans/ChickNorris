@@ -28,6 +28,10 @@ http://java.sun.com/xml/ns/persistence/orm_2_0.xsd"
 		<query>select c from Calendar c where c.isReserved=:isReserved</query>
 	</named-query>
 	
+	<named-query name="selectCalendarsByStartDate">
+		<query>select c from Calendar c where c.startDate=:startDate</query>
+	</named-query>
+	
 
 	
 	<!-- Queries voor Location -->

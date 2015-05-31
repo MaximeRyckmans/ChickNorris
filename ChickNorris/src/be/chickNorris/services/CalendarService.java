@@ -5,6 +5,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import be.chickNorris.dao.CalendarDAO;
@@ -28,6 +29,10 @@ public class CalendarService {
 		calendarDAO.beginTransaction();
 		calendarDAO.delete(ID);
 		calendarDAO.commit();
+	}
+
+	public Calendar selectCalendarsByStartDate(Date startDate) {
+		return calendarDAO.selectCalendarsByStartDate(startDate);
 	}
 
 	public List<Calendar> getAllCalendars() {

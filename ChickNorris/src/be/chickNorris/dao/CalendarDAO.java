@@ -1,11 +1,11 @@
 package be.chickNorris.dao;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.TypedQuery;
 
 import be.chickNorris.models.Calendar;
-import be.chickNorris.models.Customer;
 
 public class CalendarDAO extends AbstractDAO {
 
@@ -18,9 +18,9 @@ public class CalendarDAO extends AbstractDAO {
 	}
 
 	public void delete(int ID) {
-		Customer customer = getEntityManager().find(Customer.class, ID);
-		if (customer != null) {
-			getEntityManager().remove(customer);
+		Calendar calendar = getEntityManager().find(Calendar.class, ID);
+		if (calendar != null) {
+			getEntityManager().remove(calendar);
 		}
 	}
 
@@ -41,6 +41,14 @@ public class CalendarDAO extends AbstractDAO {
 
 		query.setParameter("isReserved", b);
 		return query.getResultList();
+	}
+
+	public Calendar selectCalendarsByStartDate(Date startDate) {
+		TypedQuery<Calendar> query = getEntityManager().createNamedQuery("selectCalendarsByStartDate", Calendar.class);
+		query.setParameter("startDate", startDate);
+
+		return query.getSingleResult();
+
 	}
 
 }

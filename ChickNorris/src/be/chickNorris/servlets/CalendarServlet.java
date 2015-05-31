@@ -49,17 +49,23 @@ public class CalendarServlet extends HttpServlet {
 		String calendarStartDate = request.getParameter("calendarStartDate");
 		String calendarEndDate = request.getParameter("calendarEndDate");
 		CalendarService calendarService = new CalendarService();
-
+		DateFormat format = new SimpleDateFormat("MM/dd/yyyy");
+		Date startDate = new Date();
+		Date endDate = new Date();
+		try {
+			startDate = format.parse(calendarStartDate);
+			endDate = format.parse(calendarEndDate);
+		} catch (ParseException e1) {
+			response.sendRedirect("/Admin.htm#calendarTab");
+		}
 		if (request.getParameter("removeDate") != null) {
-
+			Calendar cal = calendarService.selectCalendarsByStartDate(startDate);
+			calendarService.delete(cal.getID());
+			response.sendRedirect("/Admin.htm#calendarTab");
 		} else if (request.getParameter("addDate") != null) {
 
-			DateFormat format = new SimpleDateFormat("MM/dd/yyyy");
-			Date startDate;
-			Date endDate;
 			try {
-				startDate = format.parse(calendarStartDate);
-				endDate = format.parse(calendarEndDate);
+
 				Calendar cal = new Calendar();
 				cal.setStartDate(startDate);
 				cal.setEndDate(endDate);
@@ -67,7 +73,7 @@ public class CalendarServlet extends HttpServlet {
 				calendarService.create(cal);
 
 				response.sendRedirect("/Admin.htm#calendarTab");
-			} catch (ParseException e) {
+			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 				response.sendRedirect("/Admin.htm#calendarTab");
