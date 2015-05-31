@@ -19,7 +19,7 @@
 	<header id="nav-wrapper">
         <a href="Home.htm"><div id="logo"></div></a>  
     </header>
-    <div class="content">
+    <div class="content CNtext">
     	<nav class="navbar navbar-default">
     		<div class="container-fluid">
     			<div class="navbar-header">
