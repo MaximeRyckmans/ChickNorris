@@ -43,16 +43,13 @@ public class CustomerMailServlet extends HttpServlet {
 			String email = request.getParameter("form_email");
 
 			SubscriberService subscriberService = new SubscriberService();
-			String checkEmail = "";
-
-			checkEmail = subscriberService.getSubscribersByEmailAddress(email);
-			if (email == checkEmail) {
-
+			Subscriber subscriber = subscriberService.getSubscribersByEmailAddress(email);
+			if (subscriber != null) {
 				response.sendRedirect("/Home.htm");
 			} else {
-				Subscriber subscriber = new Subscriber();
-				subscriber.setEmailAddress(email);
-				subscriberService.create(subscriber);
+				Subscriber newSubscriber = new Subscriber();
+				newSubscriber.setEmailAddress(email);
+				subscriberService.create(newSubscriber);
 				response.sendRedirect("/Home.htm");
 			}
 		} catch (Exception e) {
