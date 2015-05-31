@@ -43,8 +43,10 @@ public class CustomerMailServlet extends HttpServlet {
 			String email = request.getParameter("form_email");
 
 			SubscriberService subscriberService = new SubscriberService();
+			String checkEmail = "";
 
-			if (email.equals(subscriberService.getSubscribersByEmailAddress(email).getEmailAddress())) {
+			checkEmail = subscriberService.getSubscribersByEmailAddress(email);
+			if (email == checkEmail) {
 
 				response.sendRedirect("/Home.htm");
 			} else {
@@ -54,7 +56,7 @@ public class CustomerMailServlet extends HttpServlet {
 				response.sendRedirect("/Home.htm");
 			}
 		} catch (Exception e) {
-			response.sendRedirect("/ChickNorris/Home.htm");
+			response.sendRedirect("/Home.htm");
 		}
 	}
 

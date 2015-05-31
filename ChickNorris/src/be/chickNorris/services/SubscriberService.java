@@ -30,6 +30,11 @@ public class SubscriberService {
 	}
 
 	public Subscriber getSubscribersByEmailAddress(String email) {
-		return subscriberDAO.getSubscribersByEmailAddress(email);
+
+		try {
+			return subscriberDAO.getSubscribersByEmailAddress(email);
+		} catch (Exception e) {
+			return null;
+		}
 	}
 }
