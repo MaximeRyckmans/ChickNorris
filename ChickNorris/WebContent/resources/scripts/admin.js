@@ -129,9 +129,7 @@ function deleteAllLocations() {
  */
 
 function calendar() {
-    $(".calendarDate").datepicker({
-    	altFormat: "yyyy-mm-dd"
-    });
+    $(".calendarDate").datepicker();
 };
 
 /**
