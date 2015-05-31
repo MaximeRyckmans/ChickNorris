@@ -9,9 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import be.chickNorris.models.User;
-import be.chickNorris.services.UserService;
-
 /**
  * Servlet implementation class HomeServlet
  */
@@ -33,12 +30,6 @@ public class HomeServlet extends HttpServlet {
 	 */
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		UserService userService = new UserService();
-		User user = new User();
-
-		user.setUsername("testAccount");
-		userService.create(user, "testPassword");
-
 		RequestDispatcher dispatcher = request.getRequestDispatcher(VIEW);
 		dispatcher.forward(request, response);
 	}
