@@ -200,7 +200,7 @@
             			<form role="form" action="Calendar.htm" method="post">
             				<div class="form-group">
             					<label for="calendarStartDate">Startdatum:</label>
-            					<input class="calendarDate" type="text" id="calendarStartDate" name="calendarStartDate">
+            					<input class="calendarDate" type="text" id="calendarStartDate" name="calendarStartDate"><br/>
             					<label for="calendarEndDate">Einddatum:</label>
             					<input class="calendarDate" type="text" id="calendarEndDate" name="calendarEndDate">
             				</div>
