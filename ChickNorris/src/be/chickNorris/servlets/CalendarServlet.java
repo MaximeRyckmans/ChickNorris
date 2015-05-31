@@ -65,6 +65,8 @@ public class CalendarServlet extends HttpServlet {
 				cal.setEndDate(endDate);
 				cal.setReserved(true);
 				calendarService.create(cal);
+
+				response.sendRedirect("/Admin.htm#calendarTab");
 			} catch (ParseException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
