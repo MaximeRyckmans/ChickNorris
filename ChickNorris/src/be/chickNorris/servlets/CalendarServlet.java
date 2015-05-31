@@ -54,7 +54,7 @@ public class CalendarServlet extends HttpServlet {
 
 		} else if (request.getParameter("addDate") != null) {
 
-			DateFormat format = new SimpleDateFormat("mm/dd/yyyy");
+			DateFormat format = new SimpleDateFormat("MM/dd/yyyy");
 			Date startDate;
 			Date endDate;
 			try {
