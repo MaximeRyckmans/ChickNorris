@@ -54,7 +54,7 @@ public class CalendarServlet extends HttpServlet {
 
 		} else if (request.getParameter("addDate") != null) {
 
-			DateFormat format = new SimpleDateFormat("yyyy-MMMM-dd");
+			DateFormat format = new SimpleDateFormat("mm/dd/yyyy");
 			Date startDate;
 			Date endDate;
 			try {
@@ -70,6 +70,7 @@ public class CalendarServlet extends HttpServlet {
 			} catch (ParseException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
+				response.sendRedirect("/Admin.htm#calendarTab");
 			}
 
 		}
