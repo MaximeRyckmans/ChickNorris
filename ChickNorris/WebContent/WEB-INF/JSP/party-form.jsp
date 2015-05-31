@@ -70,13 +70,12 @@
   				</div>
   				<div class="form-group">
     				<label for="form_date">Datum event (*):</label>
-    				<%java.text.DateFormat df = new java.text.SimpleDateFormat("dd/MM/yyyy"); %>
-    				<input type="text" class="form-control" name="form_date" id="form_date" placeholder="<%= df.format(new Date()) %>">
+    				<input type="text" class="form-control" name="form_date" id="form_date" >
   				</div>
   				<div class="form-group">
     				<label for="form_time">Aanvang event (*):</label>
-    				<%java.text.DateFormat df2 = new java.text.SimpleDateFormat("HH:mm"); %>
-    				<input type="text" class="form-control" name="form_time" id="form_time" placeholder="<%= df2.format(new Date()) %>">
+    				
+    				<input type="text" class="form-control" name="form_time" id="form_time">
   				</div>
   				<label for="radio-btns">Formule:</label>
   				<div id="radio-btns">
