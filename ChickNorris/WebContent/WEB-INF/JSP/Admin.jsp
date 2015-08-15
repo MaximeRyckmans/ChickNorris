@@ -219,9 +219,9 @@
 				<div id="usersPanel" class="container">
 					<form role="form" action="SaveUser.htm" method="post" >
 						<div class="form-group">
-							<label for="username">gebruikersnaam</label>
+							<label for="username">Gebruikersnaam</label>
 							<input id="username" name="username" type="textbox" placeholder="Gebruikersnaam">
-							<label for="password">Regio</label>
+							<label for="password">Paswoord</label>
 							<input id="password" name="password" type="password" placeholder="Paswoord">
 						</div>
 						<div class="form-group">

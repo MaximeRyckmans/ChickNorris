@@ -43,9 +43,9 @@
     </h3>
 
     <ul class="list">
-      <li>1.	Like onze facebookpagina</li>
-      <li>2.	Noteer U naam en telefoonnummer op uw volle CN-spaarkaart</li>
-      <li>3.	Deponeer uw Spaarkaart in de CN-Partybox</li>
+      <li>Like onze facebookpagina</li>
+      <li>Noteer U naam en telefoonnummer op uw volle CN-spaarkaart</li>
+      <li>Deponeer uw Spaarkaart in de CN-Partybox</li>
       </li>
     </ul>
 

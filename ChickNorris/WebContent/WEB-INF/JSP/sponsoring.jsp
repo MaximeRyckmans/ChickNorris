@@ -9,7 +9,7 @@
 <link rel="stylesheet" type="text/css" href="resources/css/header.css"/>
 <link rel="stylesheet" type="text/css" href="resources/css/footer.css"/>
 <link rel="stylesheet" type="text/css" href="resources/css/general.css"/>
-<link rel="stylesheet" type="text/css" href="resources/css/sponsoring.css"/>
+<link rel="stylesheet" type="text/css" href="resources/css/promotion.css"/>
 	<link rel="stylesheet" type="text/css" href="resources/css/index.css"/>
 <link rel="stylesheet" type="text/css" href="resources/css/media-queries.css"/>
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Indie+Flower"/>
@@ -30,19 +30,19 @@
 		<div id="private-wrapper" class="col-xs-12 col-md-6">
 			<img class="image col-xs-12" alt="" src="./resources/images/soccer.jpg">
 		</div>
-		<div class="container margin">
+		<div class="col-xs-12 col-md-6">
 			<h3>Wenst U als club of vereniging gesponsord te worden door CHICK NORRIS?</h3>
 			<p>Dat kan op de hierop volgende manier;</p>
-			<ul>
-				<li>1.	Stuur een mail naar wim@chicknorris.be met de gegevens van uw club</li>
-				<li>2.	Wij sturen U een flyer die U kan publiceren op uw website  en verdelen bij u leden en sympathisanten</li>
-				<li>3.	Hoe meer mensen u kan overtuigen om bij Chick Norris  hun aankopen te doen, hoe meer sponsorgelden U ontvangt</li>
+			<ul class="decimal">
+				<li>Stuur een mail naar wim@chicknorris.be met de gegevens van uw club</li>
+				<li>Wij sturen U een flyer die U kan publiceren op uw website  en verdelen bij u leden en sympathisanten</li>
+				<li>Hoe meer mensen u kan overtuigen om bij Chick Norris  hun aankopen te doen, hoe meer sponsorgelden U ontvangt</li>
 			</ul>
 			<h3>Word klant bij Chick Norris en steun uw favoriete club of vereniging!</h3>
-			<ul>
-				<li>1.	Laat het bestuur van uw favoriete club of vereniging een mail sturen met hun gegevens naar wim@chicknorris.be</li>
-				<li>2.	Doe U aankopen bij CHICK NORRIS, schrijf de naam van uw favoriete club achteraan uw kasticket en deponeer deze in de SUPPORT MY CLUB Box</li>
-				<li>3.	Uw club ontvangt jaarlijks een bepaald percentage van uw aankopen</li>
+			<ul class="decimal">
+				<li>Laat het bestuur van uw favoriete club of vereniging een mail sturen met hun gegevens naar wim@chicknorris.be</li>
+				<li>Doe U aankopen bij CHICK NORRIS, schrijf de naam van uw favoriete club achteraan uw kasticket en deponeer deze in de SUPPORT MY CLUB Box</li>
+				<li>Uw club ontvangt jaarlijks een bepaald percentage van uw aankopen</li>
 			</ul>
 		</div>
 		<div id="media-bar" class="col-xs-12">

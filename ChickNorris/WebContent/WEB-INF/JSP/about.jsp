@@ -9,6 +9,7 @@
 <link rel="stylesheet" type="text/css" href="resources/css/header.css"/>
 <link rel="stylesheet" type="text/css" href="resources/css/footer.css"/>
 <link rel="stylesheet" type="text/css" href="resources/css/general.css"/>
+	<link rel="stylesheet" type="text/css" href="resources/css/index.css"/>
 <link rel="stylesheet" type="text/css" href="resources/css/about.css"/>
 <link rel="stylesheet" type="text/css" href="resources/css/media-queries.css"/>
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Indie+Flower"/>
@@ -41,11 +42,27 @@
 				Heeft U na het doornemen van onze website nog vragen, aarzel dan niet ons te contacteren.
 			</p>
 			<p>
-				Wenst u kans te maken op een GRATIS tuinfeest, klik dan <a href="#">HIER</a>.
+				Wenst u kans te maken op een GRATIS tuinfeest, klik dan <a href="Promotion.htm">HIER</a>.
 			</p>
 			<p>
 				Tot binnenkort!
 			</p>
+		</div>
+		<div id="media-bar" class="col-xs-12">
+			<div id="media-bar-left" class="col-xs-5">
+				<p>Mis nooit een lekkere deal!</p>
+				<a class="btn btn-default btn-media" href="#" data-toggle="modal" data-target="#subscribeModal">Email Updates</a>
+			</div>
+			<div class="col-xs-2">
+				<div id="media-bar-seperator"></div>
+			</div>
+			<div id="media-bar-right" class="col-xs-5">
+				<p>Volg je smaakpapillen!</p>
+				<div id="social-links">
+					<a href="https://www.facebook.com/heerlijkekip?pnref=lhc" target="_blank"><div id="facebook"></div></a>
+					<!-- <a href="#"><div id="twitter"></div></a> -->
+				</div>
+			</div>
 		</div>
 	</div>
 	<div id="footer"><%@include file='footer.jsp'%></div>

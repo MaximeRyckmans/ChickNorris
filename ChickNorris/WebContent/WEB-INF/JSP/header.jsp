@@ -27,7 +27,7 @@
                     <li><a href="BusinessParty.htm">CN Bussiness Events</a></li>
                   </ul>
                 </li>                
-                <li><a href="Sponsoring.htm">CN Event Sponsoring</a></li>
+                <li><a href="Sponsoring.htm">CN Sponsoring</a></li>
                 <li class="dropdown">
                 	<a href="#connect" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Connect<span class="caret"></span></a>
               		<ul class="dropdown-menu" role="menu">
