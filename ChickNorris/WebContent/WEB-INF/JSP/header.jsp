@@ -1,17 +1,6 @@
 <!DOCTYPE HTML>
 
 <html>
-	<header class="container-fluid utility-header">
-    	<div class="content CNtext">
-        	<nav>
-            	<ul>
-                	<!-- <li><a href="About.htm">About CN</a></li> -->
-                	<!-- <li><a href="#">CN Jobs</a></li> -->
-                	<li><a href="Localize.htm">Localize CN</a></li>
-            	</ul>
-        	</nav>
-    	</div>
-	</header>
 	<header id="nav-wrapper" class="navbar-wrapper">
       <div class="container">
 
@@ -38,7 +27,7 @@
                     <li><a href="BusinessParty.htm">CN Bussiness Events</a></li>
                   </ul>
                 </li>                
-                <!-- <li><a href="#sponsoring">CN Event Sponsoring</a></li> -->
+                <li><a href="Sponsoring.htm">CN Event Sponsoring</a></li>
                 <li class="dropdown">
                 	<a href="#connect" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Connect<span class="caret"></span></a>
               		<ul class="dropdown-menu" role="menu">

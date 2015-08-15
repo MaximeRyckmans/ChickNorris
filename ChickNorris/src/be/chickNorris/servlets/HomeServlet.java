@@ -1,5 +1,8 @@
 package be.chickNorris.servlets;
 
+import be.chickNorris.models.User;
+import be.chickNorris.services.UserService;
+
 import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;

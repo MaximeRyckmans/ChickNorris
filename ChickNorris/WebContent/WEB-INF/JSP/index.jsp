@@ -30,21 +30,21 @@
       		</ol>
       		<div class="carousel-inner" role="listbox">
         		<div class="item">
-          			<img src="resources/images/slideshow/shutterstock_70256782.jpg" alt="First slide" style="width: 60%; margin-left: auto; margin-right: auto;">
+          			<a href="Promotion.htm"><img src="resources/images/slideshow/TuinfeestPromotie.jpg" alt="First slide"></a>
           			<div class="container">
             			<div class="carousel-caption">
             			</div>
           			</div>
         		</div>
         		<div class="item">
-          			<img src="resources/images/slideshow/shutterstock_13839559.jpg" alt="Second slide" style="width: 60%; margin-left: auto; margin-right: auto;">
+          			<img src="resources/images/slideshow/shutterstock_13839560.jpg" alt="Second slide">
           			<div class="container">
             			<div class="carousel-caption">
             			</div>
           			</div>
         		</div>
         		<div class="item active">
-          			<img src="resources/images/slideshow/shutterstock_184897820.jpg" alt="Third slide" style="width: 60%; margin-left: auto; margin-right: auto;">
+          			<img src="resources/images/slideshow/shutterstock_184897821.jpg" alt="Third slide">
           			<div class="container">
             			<div class="carousel-caption">
             			</div>

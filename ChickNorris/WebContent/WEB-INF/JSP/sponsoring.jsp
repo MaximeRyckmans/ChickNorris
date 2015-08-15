@@ -10,26 +10,56 @@
 <link rel="stylesheet" type="text/css" href="resources/css/footer.css"/>
 <link rel="stylesheet" type="text/css" href="resources/css/general.css"/>
 <link rel="stylesheet" type="text/css" href="resources/css/sponsoring.css"/>
+	<link rel="stylesheet" type="text/css" href="resources/css/index.css"/>
 <link rel="stylesheet" type="text/css" href="resources/css/media-queries.css"/>
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Indie+Flower"/>
+	<link rel="shortcut icon" href="resources/images/logo.ico">
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<!--[if lt IE 9]>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<![endif]-->
 </head>
 <body>
 	<div id="header"><%@include file='header.jsp'%></div>
-	<div id="content">
+	<div id="content" class="CNtext">
 		<div class="title-page">
 			<h2>Chick Norris - Sponsoring</h2>
 		</div>
-		<div class="container">			
-			<h3>Wij zoeken op korte termijn 6 Limburgse sportverenigingen die op zoek zijn naar een sponsor voor een stabiele en langdurige samenwerking!</h3>
+		<div id="private-wrapper" class="col-xs-12 col-md-6">
+			<img class="image col-xs-12" alt="" src="./resources/images/soccer.jpg">
+		</div>
+		<div class="container margin">
+			<h3>Wenst U als club of vereniging gesponsord te worden door CHICK NORRIS?</h3>
+			<p>Dat kan op de hierop volgende manier;</p>
 			<ul>
-				<li>Bent u bestuurder van een sportvereniging en zoekt u een sponsor voor een langdurige en stabiele samenwerking?</li>
-				<li>Speelt uw club in een provinciale reeks?</li>
-				<li>Zijn jullie de gezelligste club van Limburg met een hele bende toffe leden en een gemotiveerd bestuur dat durft “out off the box” te denken?</li>
-				<li>Kan u of iemand in de entourage van uw club ons een commercieel aantrekkelijke locatie aanbieden met voldoende parking waar één van onze foodtrucks 
-				wekelijks zijn producten kan aan de man brengen?</li>
+				<li>1.	Stuur een mail naar wim@chicknorris.be met de gegevens van uw club</li>
+				<li>2.	Wij sturen U een flyer die U kan publiceren op uw website  en verdelen bij u leden en sympathisanten</li>
+				<li>3.	Hoe meer mensen u kan overtuigen om bij Chick Norris  hun aankopen te doen, hoe meer sponsorgelden U ontvangt</li>
 			</ul>
-			<p>4 X JA geantwoord?</p>
-			<h4 id="bottom-p">Contacteer ons dan snel want misschien wordt uw club wel één van de 6 gelukkigen!</h4>
+			<h3>Word klant bij Chick Norris en steun uw favoriete club of vereniging!</h3>
+			<ul>
+				<li>1.	Laat het bestuur van uw favoriete club of vereniging een mail sturen met hun gegevens naar wim@chicknorris.be</li>
+				<li>2.	Doe U aankopen bij CHICK NORRIS, schrijf de naam van uw favoriete club achteraan uw kasticket en deponeer deze in de SUPPORT MY CLUB Box</li>
+				<li>3.	Uw club ontvangt jaarlijks een bepaald percentage van uw aankopen</li>
+			</ul>
+		</div>
+		<div id="media-bar" class="col-xs-12">
+			<div id="media-bar-left" class="col-xs-5">
+				<p>Mis nooit een lekkere deal!</p>
+				<a class="btn btn-default btn-media" href="#" data-toggle="modal" data-target="#subscribeModal">Email Updates</a>
+			</div>
+			<div class="col-xs-2">
+				<div id="media-bar-seperator"></div>
+			</div>
+			<div id="media-bar-right" class="col-xs-5">
+				<p>Volg je smaakpapillen!</p>
+				<div id="social-links">
+					<a href="https://www.facebook.com/heerlijkekip?pnref=lhc" target="_blank"><div id="facebook"></div></a>
+					<!-- <a href="#"><div id="twitter"></div></a> -->
+				</div>
+			</div>
 		</div>
 	</div>
 	<div id="footer"><%@include file='footer.jsp'%></div>

@@ -36,6 +36,7 @@
         				<li><a href="#search">Zoek klant</a></li>        	
         				<li><a href="#sendMail">Verstuur Email</a></li>
         				<li><a href="#calendarTab">Kalender</a></li>
+						<li><a href="#users">Users</a> </li>
     				</ul>
     				<ul class="nav navbar-nav navbar-right">
     					<li><a href="Login.htm">logout</a></li>
@@ -212,6 +213,23 @@
             		</div>            		
             	</div>
         	</div>
+			<div id="users" class="tab-pane">
+				<h3>Users</h3>
+				<hr/>
+				<div id="usersPanel" class="container">
+					<form role="form" action="SaveUser.htm" method="post" >
+						<div class="form-group">
+							<label for="username">gebruikersnaam</label>
+							<input id="username" name="username" type="textbox" placeholder="Gebruikersnaam">
+							<label for="password">Regio</label>
+							<input id="password" name="password" type="password" placeholder="Paswoord">
+						</div>
+						<div class="form-group">
+							<button type="submit" class="btn btn-default">Opslaan</button>
+						</div>
+					</form>
+				</div>
+			</div>
     	</div>
     </div>
     <footer>
